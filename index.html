@@ -1,17 +1,315 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>넥스토리</title>
-    <style> 
-        body {
-            margin: 0;
-            height: 100vh;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nextory</title>
+
+    <!-- 코어 스타일 -->
+    <link rel="stylesheet" href="/src/scss/index.scss" />
+    <!-- 코어 스타일 -->
+
+    <!-- 외부 스타일 -->
+    <link rel="stylesheet" href="/src/assets/lib/fontawesome-free-6.6.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="/src/assets/lib/slick/slick-theme.css" />
+    <link rel="stylesheet" href="/src/assets/lib/slick/slick.css" />
+    <link rel="stylesheet" href="/src/assets/lib/aos/aos.css" />
+    <!-- 외부 스타일 -->
+
+    <!-- 코어 라이브러리 -->
+    <script src="/src/js/header.js"></script>
+    <script src="/src/js/footer.js"></script>
+    <!-- 코어 라이브러리 -->
+
+    <!-- 외부 라이브러리 -->
+    <!-- <script src="/src/assets/lib/jquery-3.7.1.min.js"></script> -->
+    <script src="/src/assets/lib/jquery-2.2.4.min.js"></script>
+    <!-- <script src="/src/assets/lib/slick/slick.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/src/assets/lib/aos/aos.js"></script>
+    <!-- 외부 라이브러리 -->
+  </head>
+  <body>
+    <div class="header">
+      <div id="header" class="header-inner">
+        <div class="header-contents">
+          <div class="logo">
+            <a href="/">
+              <img src="./src/assets/img/logo.png" alt="" />
+            </a>
+          </div>
+          <nav class="nav">
+            <ul class="depth1">
+              <li class="menu-item">
+                <!-- li 에 이벤트 -->
+                <a href="/about/summary.html">회사소개</a>
+                <ul class="depth2">
+                  <li>
+                    <a href="/about/summary.html">개요</a>
+                  </li>
+                  <li>
+                    <a href="/about/history.html">연혁</a>
+                  </li>
+                  <li>
+                    <a href="/about/location.html">위치</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a href="/business/botfender.html">사업소개</a>
+                <ul class="depth2">
+                  <li>
+                    <a href="/business/botfender.html">Bonfender</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a href="/recruitment/recruitment.html">인재채용</a>
+                <ul class="depth2">
+                  <li>
+                    <a href="/recruitment/recruitment.html">인재상</a>
+                    <!-- <a href="/recruitment/recruitment.html?t=ideal">인재상</a> -->
+                  </li>
+                  <li>
+                    <a href="/recruitment/recruitment.html">복리후생</a>
+                    <!-- <a href="/recruitment/recruitment.html?t=benefits">복리후생</a> -->
+                  </li>
+                  <li>
+                    <a href="/recruitment/recruitment.html">채용정보</a>
+                    <!-- <a href="/recruitment/recruitment.html?t=info">채용정보</a> -->
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a href="/news/news.html">알림·홍보</a>
+                <ul class="depth2">
+                  <li>
+                    <a href="/news/news.html">보도자료</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div id="menu-btn" class="menu-btn">
+            <button>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="header-menu" class="header-menu">
+        <nav class="nav">
+          <ul class="depth1">
+            <li>
+              <a href="/about/summary.html">회사소개</a>
+              <ul class="depth2">
+                <li>
+                  <a href="/about/summary.html">개요</a>
+                </li>
+                <li>
+                  <a href="/about/history.html">연혁</a>
+                </li>
+                <li>
+                  <a href="/about/location.html">위치</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/business/botfender.html">사업소개</a>
+              <ul class="depth2">
+                <li>
+                  <a href="/business/botfender.html">Botfender</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/recruitment/recruitment.html">인재채용</a>
+              <ul class="depth2">
+                <li>
+                  <a href="/recruitment/recruitment.html">인재상</a>
+                  <!-- <a href="/recruitment/recruitment.html?t=ideal">인재상</a> -->
+                </li>
+                <li>
+                  <a href="/recruitment/recruitment.html">복리후생</a>
+                  <!-- <a href="/recruitment/recruitment.html?t=benefits">복리후생</a> -->
+                </li>
+                <li>
+                  <a href="/recruitment/recruitment.html">채용정보</a>
+                  <!-- <a href="/recruitment/recruitment.html?t=info">채용정보</a> -->
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/news/news.html">알림·홍보</a>
+              <ul class="depth2">
+                <li>
+                  <a href="/news/news.html">보도자료</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div id="main">
+      <div class="main-inner">
+        <div class="contents">
+          <section id="slick-container">
+            <div class="slick-banner">
+              <div>
+                <img src="./src/assets/img/carousel-test.jpg" alt="" style="width: 100%" />
+              </div>
+              <div>
+                <img src="./src/assets/img/carousel-test-2.jpg" alt="" style="width: 100%" />
+              </div>
+              <div>
+                <img src="./src/assets/img/carousel-test.jpg" alt="" style="width: 100%" />
+              </div>
+            </div>
+          </section>
+
+          <section id="other-container" style="height: 100vh"></section>
+
+          <script>
+            $(document).ready(function () {
+              $(".slick-banner").slick({
+                fade: true,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                pauseOnHover: false,
+              });
+
+              $("#slick-container").on("DOMMouseScroll mousewheel touchstart touchend", function (e) {
+                var E = e.originalEvent;
+                var delta = E.wheelDelta;
+                var fireE = e.originalEvent.detail;
+                let eType = e.type;
+                console.log(eType);
+
+                switch (eType) {
+                  case "mousewheel":
+                  case "DOMMouseScroll":
+                    e.preventDefault();
+                    console.log("delta", delta);
+                    console.log("fireE", fireE);
+                    if (!$(".dummy").length) {
+                      if (delta < 0 || fireE > 0) {
+                        htmlBodyAnimate($("#other-container").offset().top);
+                      } else {
+                        htmlBodyAnimate($("#slick-container").offset().top);
+                      }
+                    }
+                    break;
+                  case "touchstart":
+                    touchStart = e.originalEvent.changedTouches[0].screenY;
+                    break;
+                  case "touchend":
+                    touchEnd = e.originalEvent.changedTouches[0].screenY;
+                    let pageY = touchStart - touchEnd;
+                    if (pageY > 0) {
+                      if (!$(".dummy").length) {
+                        htmlBodyAnimate($("#other-container").offset().top);
+                      }
+                    } else {
+                    }
+                    break;
+                  default:
+                    break;
+                }
+              });
+
+              function htmlBodyAnimate(pos) {
+                // dummyCreate();
+                $("body").css({
+                  overflow: "hidden",
+                });
+                $("html,body")
+                  .stop()
+                  .animate(
+                    {
+                      scrollTop: pos,
+                    },
+                    800,
+                    function () {
+                      //   if ($(".dummy").length) {
+                      setTimeout(() => {
+                        //   dummyRemove();
+                        if (pos > 0) {
+                          $("html,body").css({
+                            overflow: "visible",
+                          });
+                        }
+                      }, 400);
+                      //   }
+                    }
+                  );
+              }
+
+              AOS.init();
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <div class="footer-logo">
+            <img src="./src/assets/img/logo.png" alt="test" />
+          </div>
+          <div class="footer-info">
+            <ul class="footer-link">
+              <li><a href="/about/summary.html">회사소개</a></li>
+              <li><a href="/business/botfender.html">사업소개</a></li>
+              <li><a href="/recruitment/recruitment.html">채용공고</a></li>
+            </ul>
+            <div class="footer-info-item">
+              <span class="title">주소.</span>
+              <span class="sub">서울 영등포구 의사당대로1길 11 대우매종리브르 1112호 (0851)</span>
+            </div>
+            <div class="footer-info-item">
+              <span class="title">전화번호.</span>
+              <span class="sub">02-6953-4490</span>
+              <span class="title">팩스.</span>
+              <span class="sub">02-786-4490</span>
+            </div>
+            <div class="footer-copyright">
+              <span>Copyright 2024. NEXTORY Inc. All rights reserved.</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="copyright">스마트 세상을 열어가는 공간정보 통합 솔루션 기업 WAVUS</div>
+          <div class="pdf-container">
+            <button>
+              <a href="">회사소개서</a>
+            </button>
+          </div>
+        </div>
+        <div class="footer-navigation">
+          <button>PAGETOP</button>
+        </div>
+      </div>
+    </div>
+    <style>
+      #slick-container {
+        background: #111;
+        position: relative;
+        overflow: hidden;
+        z-index: 100;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+      }
     </style>
-</head>
-<body>
-    <iframe src="./src/temp.pdf" width="100%" height="100%"></iframe>
-</body>
+  </body>
 </html>
