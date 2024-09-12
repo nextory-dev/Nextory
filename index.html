@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nextory</title>
 
-    <!-- 코어 스타일 -->
-    <link rel="stylesheet" href="/src/scss/index.scss" />
-    <!-- 코어 스타일 -->
-
     <!-- 외부 스타일 -->
     <link rel="stylesheet" href="/src/assets/lib/fontawesome-free-6.6.0-web/css/all.min.css" />
     <link rel="stylesheet" href="/src/assets/lib/slick/slick-theme.css" />
@@ -16,10 +12,9 @@
     <link rel="stylesheet" href="/src/assets/lib/aos/aos.css" />
     <!-- 외부 스타일 -->
 
-    <!-- 코어 라이브러리 -->
-    <script src="/src/js/header.js"></script>
-    <script src="/src/js/footer.js"></script>
-    <!-- 코어 라이브러리 -->
+    <!-- 코어 스타일 -->
+    <link rel="stylesheet" href="/src/scss/index.scss" />
+    <!-- 코어 스타일 -->
 
     <!-- 외부 라이브러리 -->
     <!-- <script src="/src/assets/lib/jquery-3.7.1.min.js"></script> -->
@@ -28,6 +23,12 @@
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="/src/assets/lib/aos/aos.js"></script>
     <!-- 외부 라이브러리 -->
+
+    <!-- 코어 라이브러리 -->
+    <script src="/src/js/common.js"></script>
+    <script src="/src/js/header.js"></script>
+    <script src="/src/js/footer.js"></script>
+    <!-- 코어 라이브러리 -->
   </head>
   <body>
     <div class="header">
@@ -35,7 +36,7 @@
         <div class="header-contents">
           <div class="logo">
             <a href="/">
-              <img src="./src/assets/img/logo.png" alt="" />
+              <img src="/src/assets/img/logo.png" alt="" />
             </a>
           </div>
           <nav class="nav">
@@ -165,13 +166,13 @@
           <section id="slick-container">
             <div class="slick-banner">
               <div>
-                <img src="./src/assets/img/carousel-test.jpg" alt="" style="width: 100%" />
+                <img src="/src/assets/img/carousel-test.jpg" alt="" style="width: 100%" />
               </div>
               <div>
-                <img src="./src/assets/img/carousel-test-2.jpg" alt="" style="width: 100%" />
+                <img src="/src/assets/img/carousel-test-2.jpg" alt="" style="width: 100%" />
               </div>
               <div>
-                <img src="./src/assets/img/carousel-test.jpg" alt="" style="width: 100%" />
+                <img src="/src/assets/img/carousel-test.jpg" alt="" style="width: 100%" />
               </div>
             </div>
           </section>
@@ -263,7 +264,7 @@
       <div class="footer-inner">
         <div class="footer-left">
           <div class="footer-logo">
-            <img src="./src/assets/img/logo.png" alt="test" />
+            <img src="/src/assets/img/logo.png" alt="test" />
           </div>
           <div class="footer-info">
             <ul class="footer-link">
@@ -294,7 +295,7 @@
             </button>
           </div>
         </div>
-        <div class="footer-navigation">
+        <div id="footer-navigation" class="footer-navigation">
           <button>PAGETOP</button>
         </div>
       </div>

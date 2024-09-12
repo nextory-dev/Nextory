@@ -1,11 +1,8 @@
 .main-inner {
-
   .page-title {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 0 auto 2rem;
-    max-width: 1300px;
     position: relative;
 
     .title {
@@ -52,5 +49,6 @@
   }
 
   .contents {
+    padding-bottom: 10rem;
   }
 }
