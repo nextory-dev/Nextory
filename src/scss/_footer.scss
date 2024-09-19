@@ -16,6 +16,8 @@
 
     .footer-logo {
       width: 40%;
+      display: flex;
+      align-items: center;
 
       > img {
         max-width: 100%;
@@ -46,10 +48,12 @@
       .footer-info-item {
         .title {
           color: #fff;
+          font-size: 1rem;
         }
 
         .sub {
           color: #fff;
+          font-size: .9rem;
         }
       }
       .footer-copyright {
@@ -66,8 +70,15 @@
     padding: 2rem 0 2rem 2rem;
 
     .copyright {
-      color: #fff;
-      font-size: 2.5rem;
+      > div:nth-of-type(1) {
+        color: #2478d7;
+        font-size: 1.8rem;
+      }
+
+      > div:nth-of-type(2) {
+        color: #fff;
+        font-size: 2rem;
+      }
     }
 
     .pdf-container {
@@ -88,11 +99,11 @@
 
   .footer-navigation {
     position: absolute;
-    right: 20px;
-    bottom: 0;
+    right: 100px;
+    bottom: 50px;
 
     > button {
-      font-size: .8rem;
+      font-size: 0.8rem;
       color: #2478d7;
       background-color: transparent;
       border: none;

@@ -1,6 +1,5 @@
 .section-1 {
-  .sticky-text {
-
+  .sticky-box {
     > div {
       top: 0;
       transition: all 0.5s ease-in-out;
@@ -23,82 +22,150 @@
   }
 
   .card-list {
-
     > li {
       width: 100%;
-      margin-bottom: 5rem;
+      margin-bottom: 10rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
 
-      > img {
-        width: 100%;
-        border-radius: 20px;
+      .text-box {
+        width: 60%;
+
+        .title {
+          color: #fff;
+          font-size: 2rem;
+          font-weight: 500;
+        }
+
+        .desc {
+          color: #fff;
+          font-size: 1.2rem;
+          margin-top: 1rem;
+        }
       }
 
-      .no {
-        font-size: 1rem;
-        color: #2478d7;
-        margin-top: 1rem;
+      .img-box {
+        width: 40%;
+
+        .img-overflow {
+          width: 100%;
+          border-radius: 20px;
+          overflow: hidden;
+
+          > img {
+            width: 100%;
+          }
+        }
+  
+        .no {
+          font-size: 1rem;
+          color: #2478d7;
+          margin-top: .5rem;
+        }
+  
+        .desc {
+          font-size: 1.2rem;
+          color: #fff;
+        }
       }
 
-      .desc {
-        font-size: 1.2rem;
-        color: #aaa;
-        margin-top: 0.5rem;
-      }
     }
   }
 }
 
-.section-2 {
-  margin-top: 10rem;
+// .section-2 {
+//   margin-top: 10rem;
 
-  .title {
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 3rem;
-  }
+//   .title {
+//     font-size: 2.5rem;
+//     color: #fff;
+//     margin-bottom: 3rem;
+//   }
 
-  .card {
-    background-color: rgba(255, 255, 255, 0.08);
-    padding: 5rem 0;
+//   .card {
+//     background-color: rgba(255, 255, 255, 0.08);
+//     padding: 5rem 0;
 
-    span {
-      font-size: 1.5rem;
-      color: #fff;
-    }
-  }
-}
+//     span {
+//       font-size: 1.5rem;
+//       color: #fff;
+//     }
+//   }
+// }
 
 .section-3 {
   margin-top: 10rem;
 
-  .title {
+  > .title {
     font-size: 2.5rem;
     color: #fff;
     margin-bottom: 3rem;
+    font-weight: 500;
   }
 
-  .circle-list {
-    row-gap: 5rem;
+  .left-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
-    .circle {
-      border: 1px solid #2478d7;
-      border-radius: 50%;
-      width: 300px;
-      height: 300px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    .text {
+      position: absolute;
+      text-align: center;
+      top: 40%;
+      transform: translateY(-40%);
 
-      span {
+      > span:nth-of-type(1) {
+        margin-bottom: 1rem;
+        color: #fac001;
+        font-size: 1.2rem;
+        display: block;
+      }
+
+      > span:nth-of-type(2) {
         color: #fff;
         font-size: 1rem;
       }
+    }
 
-      &.big {
-        background-color: #2478d7;
-        width: 350px;
-        height: 350px;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .vision-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .vision-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .icon {
+        background-color: #2f5597;
+        border-radius: 10px;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .desc {
+        margin-left: 60px;
+
+        > li {
+          color: #fff;
+          text-indent: 3px;
+
+          &:nth-of-type(1) {
+            list-style: initial;
+            text-indent: 0;
+          }
+        }
       }
     }
   }
@@ -107,24 +174,35 @@
 .section-4 {
   margin-top: 10rem;
 
-  .title {
+  > .title {
     font-size: 2.5rem;
     color: #fff;
     margin-bottom: 3rem;
+    font-weight: 500;
   }
 
-  .circle {
-    background-color: rgba(255, 255, 255, 0.08);
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .box-list {
+    .box {
+      background-color: #141e2f;
+      border-radius: 30px;
+      width: 250px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
-    span {
-      color: #fff;
+      .icon {
+        color: #fff;
+      }
+      .title {
+        font-size: 1rem;
+        color: #2478d7;
+      }
+      .desc {
+        font-size: 1.2rem;
+        color: #fff;
+      }
     }
   }
 }

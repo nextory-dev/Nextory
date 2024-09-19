@@ -56,6 +56,16 @@
     }
 
     .header-contents {
+      .logo {
+        .white-logo {
+          display: none;
+        }
+
+        .color-logo {
+          display: block;
+        }
+      }
+
       .nav {
         .depth1 {
           > li {
@@ -92,6 +102,14 @@
           max-height: 50px;
           width: auto;
         }
+      }
+
+      .white-logo {
+        display: block;
+      }
+
+      .color-logo {
+        display: none;
       }
     }
 

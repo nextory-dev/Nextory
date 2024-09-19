@@ -6,7 +6,8 @@
     }
   }
 
-  .sticky-text {
+  .sticky-box {
+
     > div {
       top: 0;
       transition: all 0.5s ease-in-out;
@@ -25,29 +26,78 @@
         font-size: 1.5rem;
         color: #aaa;
       }
+
+      .img {
+        border-radius: 30px;
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 
   .card-list {
+
     > li {
       width: 100%;
-      margin-bottom: 5rem;
-
-      > img {
-        width: 100%;
-        border-radius: 20px;
-      }
+      display: flex;
+      align-items: center;
 
       .no {
-        font-size: 1rem;
-        color: #2478d7;
-        margin-top: 1rem;
+        font-size: 1.5rem;
+        width: 80px;
+        color: #fff;
+
+        &.color {
+          color: #fac001;
+        }
+      }
+
+      .icon {
+        width: 30px;
+        position: relative;
+        padding: 100px 0;
+
+        .circle {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: #aaa;
+          margin: auto;
+
+          &.color {
+            background-color: #fac001;
+          }
+        }
+
+        &.last {
+          &::before {
+            height: 50%;
+          }
+        }
+
+        &::before{ 
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 2px;
+          height: 100%;
+          background-color: #aaa;
+          z-index: -1;
+        }
       }
 
       .desc {
-        font-size: 1.2rem;
-        color: #aaa;
-        margin-top: 0.5rem;
+        font-size: 1.4rem;
+        color: #fff;
+        width: calc(100% - 160px);
+        padding-left: 40px;
+
+        &.color {
+          color: #fac001;
+        }
       }
     }
   }
