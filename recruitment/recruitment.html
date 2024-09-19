@@ -5,88 +5,263 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nextory</title>
 
-    <!-- 코어 라이브러리 -->
-    <link rel="stylesheet" href="/src/scss/index.scss" />
-    <!-- 코어 라이브러리 -->
-
-    <!-- 외부 라이브러리 -->
+    <!-- 외부 스타일 -->
     <link rel="stylesheet" href="/src/assets/lib/fontawesome-free-6.6.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="/src/assets/lib/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="/src/assets/lib/slick/slick-theme.css" />
     <link rel="stylesheet" href="/src/assets/lib/slick/slick.css" />
     <link rel="stylesheet" href="/src/assets/lib/aos/aos.css" />
+    <!-- 외부 스타일 -->
 
+    <!-- 코어 스타일 -->
+    <link rel="stylesheet" href="/src/scss/common.scss" />
+    <link rel="stylesheet" href="/src/scss/recruitment.scss" />
+    <!-- 코어 스타일 -->
+
+    <!-- 외부 라이브러리 -->
     <!-- <script src="/src/assets/lib/jquery-3.7.1.min.js"></script> -->
-    <script type="text/javascript" src="/src/assets/lib/jquery-2.2.4.min.js"></script>
-    <!-- <script type="text/javascript" src="/src/assets/lib/slick/slick.min.js"></script> -->
+    <script src="/src/assets/lib/jquery-2.2.4.min.js"></script>
+    <!-- <script src="/src/assets/lib/slick/slick.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="/src/assets/lib/aos/aos.js"></script>
     <!-- 외부 라이브러리 -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- 코어 라이브러리 -->
+    <script src="/src/js/common.js"></script>
+    <script src="/src/js/header.js"></script>
+    <script src="/src/js/footer.js"></script>
+    <!-- 코어 라이브러리 -->
   </head>
   <body>
-    <div class="page-title" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
-      <div class="title">
-        <span>연혁</span>
+    <div id="main">
+      <div class="main-inner">
+        <div class="page-title mb-4 container">
+          <div class="title">
+            <span class="d-flex overflow-hidden">
+              <em data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">인</em>
+              <em data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">재</em>
+              <em data-aos="fade-up" data-aos-offset="200" data-aos-delay="300" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">채</em>
+              <em data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">용</em>
+            </span>
+          </div>
+          <ul class="bread-crumbs">
+            <li>
+              <i class="fas fa-home"></i>
+            </li>
+            <li>
+              <i class="fas fa-angle-right"></i>
+            </li>
+            <li><span></span></li>
+            <li>
+              <i class="fas fa-angle-right"></i>
+            </li>
+            <li><span></span></li>
+          </ul>
+        </div>
+        <div class="contents container">
+          <section id="ideal" class="section-1">
+            <div class="banner-img">
+              <img src="/src/assets/img/carousel-test.jpg" alt="" />
+            </div>
+            <div class="banner-text">
+              <span>㈜웨이버스와 함께 나아갈 인재 채용 정보를 소개합니다.</span>
+            </div>
+            <div class="d-md-flex flex-wrap row-gap-md-5">
+              <div class="col-md-6 pe-3">
+                <div class="d-flex flex-column justify-content-center align-items-start h-100 ps-5">
+                  <span class="mb-3">웨이버스가 하는 일</span>
+                  <span class="mb-3">최신 기술트랜드에 맞춘 연구개발로 디지털 사업을 선도</span>
+                  <span>
+                    ㈜웨이버스는 국토/부동산/지적 등 공간정보 플랫폼 전문기업입니다. <br />
+                    우리는 플랫폼, 클라우드, 블록체인, 스마트시티, IoT, 빅데이터 융·복합 등 <br />
+                    최신 기술트랜드에 맞게 연구하며 솔루션 개발, 시스템 통합(SI), 유지보수(SM), <br />
+                    컨설팅 등 고객이 필요한 디지털 사업을 지원/수행하고 있습니다.
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-6 ps-3">
+                <img class="w-100 rounded-4" src="/src/assets/img/carousel-test.jpg" alt="" />
+              </div>
+              <div class="col-md-6 pe-3">
+                <img class="w-100 rounded-4" src="/src/assets/img/carousel-test.jpg" alt="" />
+              </div>
+              <div class="col-md-6 pe-3">
+                <div class="d-flex flex-column justify-content-center align-items-start h-100 ps-5">
+                  <span class="mb-3">웨이버스의 일하는 방식</span>
+                  <span class="mb-3"></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+            <div class="title">
+              <span>채용절차</span>
+            </div>
+            <div class="recruit-flow">
+              <ul>
+                <li>
+                  <span>STEP 1</span>
+                  <span>입사지원</span>
+                </li>
+                <li>
+                  <span>STEP 1</span>
+                  <span>입사지원</span>
+                </li>
+                <li>
+                  <span>STEP 1</span>
+                  <span>입사지원</span>
+                </li>
+                <li>
+                  <span>STEP 1</span>
+                  <span>입사지원</span>
+                </li>
+                <li>
+                  <span>STEP 1</span>
+                  <span>입사지원</span>
+                </li>
+                <li>
+                  <span>STEP 1</span>
+                  <span>입사지원</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section id="benefits" class="section-2">
+            <div class="title">
+              <span>복리후생</span>
+            </div>
+            <ul class="benefits-list d-flex flex-wrap">
+              <li class="col-md-6 p-5 d-flex">
+                <span class="pe-5">icon</span>
+                <div>
+                  <span>우리 회사만의 특별한 복지!</span>
+                  <ul class="d-flex flex-wrap">
+                    <li class="col-12">명절 선물</li>
+                    <li class="col-12">명절 선물</li>
+                    <li class="col-12">명절 선물</li>
+                  </ul>
+                </div>
+              </li>
+            <li class="col-md-6 p-5 d-flex">
+                <span class="pe-5">icon</span>
+                <div>
+                  <span>우리 회사만의 특별한 복지!</span>
+                  <ul class="d-flex flex-wrap">
+                    <li class="col-12">명절 선물</li>
+                    <li class="col-12">명절 선물</li>
+                    <li class="col-12">명절 선물</li>
+                  </ul>
+                </div>
+              </li>
+            <li class="col-md-6 p-5 d-flex">
+                <span class="pe-5">icon</span>
+                <div>
+                  <span>우리 회사만의 특별한 복지!</span>
+                  <ul class="d-flex flex-wrap">
+                    <li class="col-12">명절 선물</li>
+                    <li class="col-12">명절 선물</li>
+                    <li class="col-12">명절 선물</li>
+                  </ul>
+                </div>
+              </li>
+            <li class="col-md-6 p-5 d-flex">
+                <span class="pe-5">icon</span>
+                <div>
+                  <span>우리 회사만의 특별한 복지!</span>
+                  <ul class="d-flex flex-wrap">
+                    <li class="col-12">명절 선물</li>
+                    <li class="col-12">명절 선물</li>
+                    <li class="col-12">명절 선물</li>
+                  </ul>
+                </div>
+              </li>
+            <li class="col-md-6 p-5 d-flex">
+                <span class="pe-5">icon</span>
+                <div>
+                  <span>우리 회사만의 특별한 복지!</span>
+                  <ul class="d-flex flex-wrap">
+                    <li class="col-12">명절 선물</li>
+                    <li class="col-12">명절 선물</li>
+                    <li class="col-12">명절 선물</li>
+                  </ul>
+                </div>
+              </li>
+            <li class="col-md-6 p-5 d-flex">
+                <span class="pe-5">icon</span>
+                <div>
+                  <span>우리 회사만의 특별한 복지!</span>
+                  <ul class="d-flex flex-wrap">
+                    <li class="col-12">명절 선물</li>
+                    <li class="col-12">명절 선물</li>
+                    <li class="col-12">명절 선물</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section id="info" class="section-3">
+            <div class="title">
+              <span>채용정보</span>
+            </div>
+            <div class="text-box-list d-flex gap-3">
+              <div class="info p-5">
+                <div class="d-flex align-items-center">
+                  <span class="pe-5">icon</span>
+                  <div class="d-flex flex-column">
+                    <span>담당자</span>
+                    <span>경영지원팀 인사담당자</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <span class="pe-5">icon</span>
+                  <div class="d-flex flex-column">
+                    <span>이메일</span>
+                    <span>recruitment@nextory.co.kr</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <span class="pe-5">icon</span>
+                  <div class="d-flex flex-column">
+                    <span>전화</span>
+                    <span>02-6953-4490</span>
+                  </div>
+                </div>
+              </div>
+              <div class="download p-5 d-flex flex-column align-items-center">
+                <span>icon</span>
+                <span>입사지원서</span>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
-      <ul class="bread-crumbs">
-        <li>
-          <i class="fas fa-home"></i>
-        </li>
-        <li>
-          <i class="fas fa-angle-right"></i>
-        </li>
-        <li><span></span></li>
-        <li>
-          <i class="fas fa-angle-right"></i>
-        </li>
-        <li><span></span></li>
-      </ul>
     </div>
-    <section id="ideal">
-      <h2 style="font-size: 3rem; color: #fff" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">섹션 1</h2>
-    </section>
-
-    <section id="benefits">
-      <h2 style="font-size: 3rem; color: #fff" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">섹션 2</h2>
-    </section>
-
-    <section id="info">
-      <h2 style="font-size: 3rem; color: #fff" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">섹션 3</h2>
-    </section>
-
-    <script>
-      // URL에서 파라미터 값을 가져오는 함수
-      function getQueryParam(param) {
-        const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(param);
-      }
-
-      // 스크롤 함수
-      function scrollToElementById(id) {
-        const element = document.getElementById(id);
-        console.error("element", element);
-
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-
-      document.addEventListener("DOMContentLoaded", function (e) {
-        // 파라미터가 있다면 해당 ID로 스크롤
-        const targetId = getQueryParam("t");
-        console.error("targetId", targetId);
-
-        if (targetId) {
-          scrollToElementById(targetId);
-        }
-
-        AOS.init();
-      });
-    </script>
-
-    <style>
-      section {
-        height: 100vh;
-      }
-    </style>
   </body>
+
+  <script>
+    // URL에서 파라미터 값을 가져오는 함수
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    // 스크롤 함수
+    function scrollToElementById(id) {
+      const element = document.getElementById(id);
+      console.error("element", element);
+
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function (e) {
+      // 파라미터가 있다면 해당 ID로 스크롤
+      const targetId = getQueryParam("t");
+      console.error("targetId", targetId);
+
+      if (targetId) {
+        scrollToElementById(targetId);
+      }
+    });
+  </script>
 </html>

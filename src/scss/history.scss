@@ -1,0 +1,54 @@
+.section-1 {
+  .banner-img {
+    > img {
+      max-width: 100%;
+      border-radius: 20px;
+    }
+  }
+
+  .sticky-text {
+    > div {
+      top: 0;
+      transition: all 0.5s ease-in-out;
+      height: calc(100vh - 350px);
+
+      &.sticky {
+        transform: translateY(100px);
+      }
+
+      .title {
+        font-size: 3rem;
+        color: #fff;
+      }
+
+      .sub {
+        font-size: 1.5rem;
+        color: #aaa;
+      }
+    }
+  }
+
+  .card-list {
+    > li {
+      width: 100%;
+      margin-bottom: 5rem;
+
+      > img {
+        width: 100%;
+        border-radius: 20px;
+      }
+
+      .no {
+        font-size: 1rem;
+        color: #2478d7;
+        margin-top: 1rem;
+      }
+
+      .desc {
+        font-size: 1.2rem;
+        color: #aaa;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}

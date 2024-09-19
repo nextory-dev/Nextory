@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nextory</title>
-</head>
-<body>
-    
-</body>
+
+    <!-- 외부 스타일 -->
+    <link rel="stylesheet" href="/src/assets/lib/fontawesome-free-6.6.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="/src/assets/lib/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/src/assets/lib/slick/slick-theme.css" />
+    <link rel="stylesheet" href="/src/assets/lib/slick/slick.css" />
+    <link rel="stylesheet" href="/src/assets/lib/aos/aos.css" />
+    <!-- 외부 스타일 -->
+
+    <!-- 코어 스타일 -->
+    <link rel="stylesheet" href="/src/scss/common.scss" />
+    <link rel="stylesheet" href="/src/scss/botfender.scss" />
+    <!-- 코어 스타일 -->
+
+    <!-- 외부 라이브러리 -->
+    <!-- <script src="/src/assets/lib/jquery-3.7.1.min.js"></script> -->
+    <script src="/src/assets/lib/jquery-2.2.4.min.js"></script>
+    <!-- <script src="/src/assets/lib/slick/slick.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/src/assets/lib/aos/aos.js"></script>
+    <!-- 외부 라이브러리 -->
+
+    <!-- 코어 라이브러리 -->
+    <script src="/src/js/common.js"></script>
+    <script src="/src/js/header.js"></script>
+    <script src="/src/js/footer.js"></script>
+    <!-- 코어 라이브러리 -->
+  </head>
+  <body>
+    <div id="main">
+      <div class="main-inner">
+        <div class="page-title mb-4 container">
+          <div class="title">
+            <span class="d-flex overflow-hidden">
+              <em data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">Botfender</em>
+            </span>
+          </div>
+          <ul class="bread-crumbs">
+            <li>
+              <i class="fas fa-home"></i>
+            </li>
+            <li>
+              <i class="fas fa-angle-right"></i>
+            </li>
+            <li><span></span></li>
+            <li>
+              <i class="fas fa-angle-right"></i>
+            </li>
+            <li><span></span></li>
+          </ul>
+        </div>
+        <div class="contents container"></div>
+      </div>
+    </div>
+  </body>
 </html>

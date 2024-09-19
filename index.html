@@ -7,12 +7,14 @@
 
     <!-- 외부 스타일 -->
     <link rel="stylesheet" href="/src/assets/lib/fontawesome-free-6.6.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="/src/assets/lib/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="/src/assets/lib/slick/slick-theme.css" />
     <link rel="stylesheet" href="/src/assets/lib/slick/slick.css" />
     <link rel="stylesheet" href="/src/assets/lib/aos/aos.css" />
     <!-- 외부 스타일 -->
 
     <!-- 코어 스타일 -->
+    <link rel="stylesheet" href="/src/scss/common.scss" />
     <link rel="stylesheet" href="/src/scss/index.scss" />
     <!-- 코어 스타일 -->
 
@@ -46,13 +48,10 @@
                 <a href="/about/summary.html">회사소개</a>
                 <ul class="depth2">
                   <li>
-                    <a href="/about/summary.html">개요</a>
+                    <a href="/about/summary.html">회사개요</a>
                   </li>
                   <li>
                     <a href="/about/history.html">연혁</a>
-                  </li>
-                  <li>
-                    <a href="/about/location.html">위치</a>
                   </li>
                 </ul>
               </li>
@@ -60,7 +59,7 @@
                 <a href="/business/botfender.html">사업소개</a>
                 <ul class="depth2">
                   <li>
-                    <a href="/business/botfender.html">Bonfender</a>
+                    <a href="/business/botfender.html">BotfenderAI</a>
                   </li>
                 </ul>
               </li>
@@ -82,12 +81,7 @@
                 </ul>
               </li>
               <li class="menu-item">
-                <a href="/news/news.html">알림·홍보</a>
-                <ul class="depth2">
-                  <li>
-                    <a href="/news/news.html">보도자료</a>
-                  </li>
-                </ul>
+                <a href="/contact/contact.html">Contact Us</a>
               </li>
             </ul>
           </nav>
@@ -113,13 +107,10 @@
               <a href="/about/summary.html">회사소개</a>
               <ul class="depth2">
                 <li>
-                  <a href="/about/summary.html">개요</a>
+                  <a href="/about/summary.html">회사개요</a>
                 </li>
                 <li>
                   <a href="/about/history.html">연혁</a>
-                </li>
-                <li>
-                  <a href="/about/location.html">위치</a>
                 </li>
               </ul>
             </li>
@@ -127,7 +118,7 @@
               <a href="/business/botfender.html">사업소개</a>
               <ul class="depth2">
                 <li>
-                  <a href="/business/botfender.html">Botfender</a>
+                  <a href="/business/botfender.html">BotfenderAI</a>
                 </li>
               </ul>
             </li>
@@ -149,12 +140,7 @@
               </ul>
             </li>
             <li>
-              <a href="/news/news.html">알림·홍보</a>
-              <ul class="depth2">
-                <li>
-                  <a href="/news/news.html">보도자료</a>
-                </li>
-              </ul>
+              <a href="/contact/contact.html">Contact Us</a>
             </li>
           </ul>
         </nav>
@@ -163,72 +149,162 @@
     <div id="main">
       <div class="main-inner">
         <div class="contents">
-          <section id="slick-container">
-            <div class="slick-banner">
-              <div>
-                <img src="/src/assets/img/carousel-test.jpg" alt="" style="width: 100%" />
+          <section id="slick-container" class="section-1">
+            <div id="slick-banner-list" class="slick-banner-list">
+              <div class="position-relative">
+                <div class="back-img"></div>
+                <div class="slick-banner position-absolute">
+                  <span>늘 창의적인 생각과 자유로운 사고로<br />새로운 스토리를 그려갑니다.</span>
+                  <span>2024년 (주)네스토리로 사명을 변경하고,<br />혁신적인 기술 개발과 고객 중심의 서비스로 새로운 이야기를 써 나갑니다.</span>
+                </div>
               </div>
-              <div>
-                <img src="/src/assets/img/carousel-test-2.jpg" alt="" style="width: 100%" />
+              <div class="position-relative">
+                <div class="back-img"></div>
+                <div class="slick-banner position-absolute">
+                  <span>"for the next story"라는 캐치프레이즈 아래,<br />전문성을 갖춘 인재들이 최고의 결과로 함께 성장해 나갑니다.</span>
+                  <span>다수의 보안 전문기업의 파트너쉽 관계를 유지하여,<br />고객 No.1 서비스와 지속적인 가치 창출로 시장의 리더로 성장하고 있습니다.</span>
+                </div>
               </div>
-              <div>
-                <img src="/src/assets/img/carousel-test.jpg" alt="" style="width: 100%" />
+              <div class="position-relative">
+                <div class="back-img"></div>
+                <div class="slick-banner position-absolute">
+                  <span>악성 봇(Bot)으로부터 웹사이트와 애플리케이션을 보호하는<br />강력한 보안 솔루션을 제공합니다.</span>
+                  <span>첨단 인공지능(AI/ML) 기술을 활용해 정상적인 사용자와 악성 봇(Bot)을 구분하며,<br />실시간으로 위협을 탐지하고 차단합니다.</span>
+                </div>
+              </div>
+            </div>
+            <div class="slideDots act">
+              <button class="on">
+                01
+                <svg class="circle_progress" width="60" height="60" viewBox="0 0 60 60">
+                  <circle class="frame" cx="30" cy="30" r="29.5" stroke-width="1" fill="#fff"></circle>
+                  <circle class="bar" cx="30" cy="30" r="29.5" stroke-width="1" style="animation-delay: 1s"></circle>
+                </svg>
+              </button>
+              <button class="">
+                02
+                <svg class="circle_progress" width="60" height="60" viewBox="0 0 60 60">
+                  <circle class="frame" cx="30" cy="30" r="29.5" stroke-width="1"></circle>
+                  <circle class="bar" cx="30" cy="30" r="29.5" stroke-width="1" style="animation-delay: 1s"></circle>
+                </svg>
+              </button>
+              <button class="">
+                03
+                <svg class="circle_progress" width="60" height="60" viewBox="0 0 60 60">
+                  <circle class="frame" cx="30" cy="30" r="29.5" stroke-width="1"></circle>
+                  <circle class="bar" cx="30" cy="30" r="29.5" stroke-width="1" style="animation-delay: 1s"></circle>
+                </svg>
+              </button>
+            </div>
+          </section>
+
+          <section id="business-container" class="section-2">
+            <div class="h-100 w-100 d-flex align-items-center container">
+              <div class="col">
+                <div class="no">BUSINESS 01</div>
+                <div class="title">실시간 악성 봇(매크로) 탐지/방어</div>
+                <div class="desc">
+                  BotfenderAI(봇펜더AI)는 악성 봇 & 불법 매크로에 대해 <br />
+                  인공지능(AI/ML)기반의 실시간(Real-time) 탐지를 제공하고 <br />
+                  다양한 위협의 신속한 차단 및 방어를 지원합니다.
+                </div>
+                <div>
+                  <button class="detail-btn">
+                    <a href="/business/botfender.html"> <span>VIEW DETAIL</span></a>
+                  </button>
+                </div>
+              </div>
+              <div class="col img-cont">
+                <img src="/src/assets/img/carousel-test.jpg" alt="">
               </div>
             </div>
           </section>
 
-          <section id="other-container" style="height: 100vh"></section>
-
           <script>
             $(document).ready(function () {
-              $(".slick-banner").slick({
+              $("#slick-banner-list").slick({
                 fade: true,
-                autoplay: true,
-                autoplaySpeed: 1000,
+                slidesToScroll: 1,
+                // autoplay: true,
+                autoplaySpeed: 6000,
+                infinite: true,
+                dots: true,
+                arrows: false,
+                speed: 1000,
+                swipe: true,
+                pauseOnFocus: false,
+                focusOnSelect: false,
                 pauseOnHover: false,
               });
 
-              $("#slick-container").on("DOMMouseScroll mousewheel touchstart touchend", function (e) {
-                var E = e.originalEvent;
-                var delta = E.wheelDelta;
-                var fireE = e.originalEvent.detail;
-                let eType = e.type;
-                console.log(eType);
+              let scrollFlag = true;
+              $("#slick-container")
+                .off()
+                .on("DOMMouseScroll mousewheel touchstart touchend", function (e) {
+                  if (!scrollFlag) {
+                    return false;
+                  }
+                  scrollFlag = false;
+                  var E = e.originalEvent;
+                  var delta = E.wheelDelta;
+                  var fireE = e.originalEvent.detail;
+                  let eType = e.type;
+                  console.log(eType);
 
-                switch (eType) {
-                  case "mousewheel":
-                  case "DOMMouseScroll":
-                    e.preventDefault();
-                    console.log("delta", delta);
-                    console.log("fireE", fireE);
-                    if (!$(".dummy").length) {
-                      if (delta < 0 || fireE > 0) {
-                        htmlBodyAnimate($("#other-container").offset().top);
-                      } else {
-                        htmlBodyAnimate($("#slick-container").offset().top);
-                      }
-                    }
-                    break;
-                  case "touchstart":
-                    touchStart = e.originalEvent.changedTouches[0].screenY;
-                    break;
-                  case "touchend":
-                    touchEnd = e.originalEvent.changedTouches[0].screenY;
-                    let pageY = touchStart - touchEnd;
-                    if (pageY > 0) {
+                  switch (eType) {
+                    case "mousewheel":
+                    case "DOMMouseScroll":
+                      e.preventDefault();
+                      console.log("delta", delta);
+                      console.log("fireE", fireE);
                       if (!$(".dummy").length) {
-                        htmlBodyAnimate($("#other-container").offset().top);
+                        if (delta < 0 || fireE > 0) {
+                          htmlBodyAnimate($("#business-container").offset().top);
+                        } else {
+                          htmlBodyAnimate($("#slick-container").offset().top);
+                        }
                       }
-                    } else {
-                    }
-                    break;
-                  default:
-                    break;
-                }
+                      break;
+                    case "touchstart":
+                      touchStart = e.originalEvent.changedTouches[0].screenY;
+                      break;
+                    case "touchend":
+                      touchEnd = e.originalEvent.changedTouches[0].screenY;
+                      let pageY = touchStart - touchEnd;
+                      if (pageY > 0) {
+                        if (!$(".dummy").length) {
+                          htmlBodyAnimate($("#business-container").offset().top);
+                        }
+                      } else {
+                      }
+                      break;
+                    default:
+                      break;
+                  }
+                });
+
+              let dots = $("#slick-container").find(".slideDots button");
+              $("#slick-banner-list")
+                .off()
+                .on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+                  console.error("beforeChange");
+
+                  dots.removeClass("on");
+                  dots.eq(nextSlide).addClass("on");
+                  dots.find(".bar").css({
+                    animationDelay: "1s",
+                  });
+                });
+
+              dots.off().on("click", function () {
+                let idx = $(this).index();
+                $("#slick-banner-list").slick("slickGoTo", idx);
+                // $("#slick-banner-list").find(".txtSlide").slick("slickGoTo", idx);
+                // $("#slick-banner-list").find(".mask").slick("slickGoTo", idx);
               });
 
               function htmlBodyAnimate(pos) {
-                // dummyCreate();
+                dummyCreate();
                 $("body").css({
                   overflow: "hidden",
                 });
@@ -238,23 +314,38 @@
                     {
                       scrollTop: pos,
                     },
-                    800,
+                    0,
                     function () {
-                      //   if ($(".dummy").length) {
-                      setTimeout(() => {
-                        //   dummyRemove();
-                        if (pos > 0) {
-                          $("html,body").css({
-                            overflow: "visible",
-                          });
-                        }
-                      }, 400);
-                      //   }
+                      if ($(".dummy").length) {
+                        setTimeout(() => {
+                          dummyRemove();
+                          if (pos > 0) {
+                            $("html,body").css({
+                              overflow: "visible",
+                            });
+                          }
+                          scrollFlag = true;
+                        }, 400);
+                      }
                     }
                   );
               }
 
-              AOS.init();
+              function dummyCreate() {
+                if (!$(".dummy").length) {
+                  $("body").append("<div class='dummy'></div>");
+                }
+
+                $(".dummy").on("DOMScroll mousewheel DOMMousewheel touchstart touchend", function (e) {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  return false;
+                });
+              }
+
+              function dummyRemove() {
+                $(".dummy").remove();
+              }
             });
           </script>
         </div>
@@ -271,6 +362,7 @@
               <li><a href="/about/summary.html">회사소개</a></li>
               <li><a href="/business/botfender.html">사업소개</a></li>
               <li><a href="/recruitment/recruitment.html">채용공고</a></li>
+              <li><a href="/contact/contact.html">Contact Us</a></li>
             </ul>
             <div class="footer-info-item">
               <span class="title">주소.</span>

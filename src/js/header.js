@@ -32,4 +32,13 @@ $(document).ready(function () {
     } else {
     }
   });
+
+  $(window)
+    .off()
+    .on("scroll", function () {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      
+      if(scrollTop > 50) $header.toggleClass("fix");
+      else $header.toggleClass("fix");
+    });
 });

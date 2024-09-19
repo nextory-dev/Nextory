@@ -1,0 +1,112 @@
+.section-1 {
+  .banner-img {
+    > img {
+      max-width: 100%;
+      border-radius: 20px;
+    }
+  }
+
+  .banner-text {
+    padding: 5rem 0;
+    text-align: center;
+
+    > span {
+      font-size: 3rem;
+      color: #fff;
+    }
+  }
+
+  .title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+
+  .recruit-flow {
+    border: 1px dotted rgba(255, 255, 255, 0.2);
+    border-radius: 145px;
+
+    > ul {
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+
+      > li {
+        width: 210px;
+        margin: 0 -9px;
+        height: 210px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.05);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &:last-of-type {
+            background-color: #2478d7;
+        }
+
+        >span {
+            font-size: 1rem;
+            color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.section-2 {
+  margin-top: 10rem;
+
+  .title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 3rem;
+  }
+
+  .benefits-list {
+    color: #fff;
+
+    > li {
+      border: 1px dashed rgba(255, 255, 255, 0.15);
+
+      &:nth-of-type(odd) {
+        border-left: 0;
+      }
+
+      &:nth-of-type(even) {
+        border-right: 0;
+      }
+    }
+  }
+}
+
+.section-3 {
+  margin-top: 10rem;
+
+  .title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 3rem;
+  }
+
+  .text-box-list {
+    span {
+      color: #fff;
+    }
+
+    .info {
+      border: 1px solid #ccc;
+      flex: 9 1 100px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .download {
+      border: 1px solid #ccc;
+      flex: 1 1 100px;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nextory</title>
+
+    <!-- 외부 스타일 -->
+    <link rel="stylesheet" href="/src/assets/lib/fontawesome-free-6.6.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="/src/assets/lib/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/src/assets/lib/slick/slick-theme.css" />
+    <link rel="stylesheet" href="/src/assets/lib/slick/slick.css" />
+    <link rel="stylesheet" href="/src/assets/lib/aos/aos.css" />
+    <!-- 외부 스타일 -->
+
+    <!-- 코어 스타일 -->
+    <link rel="stylesheet" href="/src/scss/common.scss" />
+    <link rel="stylesheet" href="/src/scss/contact.scss" />
+    <!-- 코어 스타일 -->
+
+    <!-- 외부 라이브러리 -->
+    <!-- <script src="/src/assets/lib/jquery-3.7.1.min.js"></script> -->
+    <script src="/src/assets/lib/jquery-2.2.4.min.js"></script>
+    <!-- <script src="/src/assets/lib/slick/slick.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/src/assets/lib/aos/aos.js"></script>
+    <!-- 외부 라이브러리 -->
+
+    <!-- 코어 라이브러리 -->
+    <script src="/src/js/common.js"></script>
+    <script src="/src/js/header.js"></script>
+    <script src="/src/js/footer.js"></script>
+    <!-- 코어 라이브러리 -->
+  </head>
+  <body>
+    <div id="main">
+      <div class="main-inner">
+        <div class="page-title mb-4 container">
+          <div class="title">
+            <span class="d-flex overflow-hidden">
+              <em data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">Contact</em>
+              <em data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-center">Us</em>
+            </span>
+          </div>
+          <ul class="bread-crumbs">
+            <li>
+              <i class="fas fa-home"></i>
+            </li>
+            <li>
+              <i class="fas fa-angle-right"></i>
+            </li>
+            <li><span></span></li>
+            <li>
+              <i class="fas fa-angle-right"></i>
+            </li>
+            <li><span></span></li>
+          </ul>
+        </div>
+        <div class="contents container">
+          <section class="section-1">
+            <div class="map-container">
+              <div id="map" style="width: 500px; height: 400px"></div>
+              <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a1cc041ff5b2815990e83abf8548f336">
+                let container = document.getElementById("map"); //지도를 담을 영역의 DOM 레퍼런스
+                let options = {
+                  //지도를 생성할 때 필요한 기본 옵션
+                  center: new kakao.maps.LatLng(37.5192120330535, 126.928582231249), //지도의 중심좌표.
+                  level: 3, //지도의 레벨(확대, 축소 정도)
+                };
+
+                let map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+              </script>
+            </div>
+            <ul class="d-flex box-list">
+              <li class="col-4 p-2 d-flex align-items-center">
+                <span class="me-4">icon</span>
+                <div class="d-flex flex-column">
+                  <p>주소</p>
+                  <span>(07332) 서울 영등포구 여의도동 의사당대로1길 11</span>
+                  <span>대우메종오피스텔 1112호</span>
+                </div>
+              </li>
+              <li class="col-4 p-2 d-flex align-items-center">
+                <span class="me-4">icon</span>
+                <div class="d-flex flex-column">
+                  <p>연락처</p>
+                  <span>T. 02-6953-4490</span>
+                  <span>F. 02-786-4490</span>
+                </div>
+              </li>
+              <li class="col-4 p-2 d-flex align-items-center">
+                <span class="me-4">icon</span>
+                <div class="d-flex flex-column">
+                  <p>지하철 이용 시</p>
+                  <span>샛강역 1번 출구 도보 5분 거리</span>
+                  <span>여의도역 5번 출구 도보 10분 거리</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
