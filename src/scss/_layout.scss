@@ -1,4 +1,7 @@
 .main-inner {
+  max-width: 1920px;
+  margin: 0 auto;
+  
   &.layout-inner {
     padding-top: 200px;
   }
@@ -69,6 +72,15 @@
   }
 
   .contents {
-    padding-bottom: 160px;
+    padding-bottom: 10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-inner {
+
+    .contents {
+      padding-bottom: 15rem;
+    }
   }
 }

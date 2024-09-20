@@ -34,8 +34,8 @@
     <!-- 코어 라이브러리 -->
   </head>
   <body>
-    <div class="header">
-      <div id="header" class="header-inner">
+    <div id="header">
+      <div id="header-inner" class="header-inner">
         <div class="header-contents">
           <div class="logo">
             <a href="/index.html">
@@ -43,7 +43,7 @@
               <img class="color-logo" src="/src/assets/img/color-full-logo.png" alt="" />
             </a>
           </div>
-          <nav class="nav">
+          <nav class="nav d-none d-md-block">
             <ul class="depth1">
               <li class="menu-item">
                 <!-- li 에 이벤트 -->
@@ -105,9 +105,9 @@
       <div id="header-menu" class="header-menu">
         <nav class="nav">
           <ul class="depth1">
-            <li>
+            <li class="d-block d-md-flex">
               <a href="/about/summary.html">회사소개</a>
-              <ul class="depth2">
+              <ul class="depth2 d-md-flex">
                 <li>
                   <a href="/about/summary.html">회사개요</a>
                 </li>
@@ -116,17 +116,17 @@
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="d-block d-md-flex">
               <a href="/business/botfender.html">사업소개</a>
-              <ul class="depth2">
+              <ul class="depth2 d-md-flex">
                 <li>
                   <a href="/business/botfender.html">BotfenderAI</a>
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="d-block d-md-flex">
               <a href="/recruitment/recruitment.html">인재채용</a>
-              <ul class="depth2">
+              <ul class="depth2 d-md-flex">
                 <li>
                   <a href="/recruitment/recruitment.html">인재상</a>
                   <!-- <a href="/recruitment/recruitment.html?t=ideal">인재상</a> -->
@@ -154,23 +154,38 @@
           <section id="slick-container" class="section-1">
             <div id="slick-banner-list" class="slick-banner-list">
               <div class="position-relative">
-                <div class="back-img back-img-1"></div>
+                <!-- <div class="back-img back-img-1"></div> -->
+                <div class="back-video">
+                  <video src="/src/assets/video/3.mp4" autoplay muted loop></video>
+                </div>
                 <div class="slick-banner position-absolute">
                   <span>늘 창의적인 생각과 자유로운 사고로<br />새로운 스토리를 그려갑니다.</span>
                   <span>2024년 (주)네스토리로 사명을 변경하고,<br />혁신적인 기술 개발과 고객 중심의 서비스로 새로운 이야기를 써 나갑니다.</span>
                 </div>
               </div>
               <div class="position-relative">
-                <div class="back-img back-img-2"></div>
+                <!-- <div class="back-img back-img-2"></div> -->
+                <div class="back-video">
+                  <video src="/src/assets/video/4.mp4" autoplay muted loop></video>
+                </div>
                 <div class="slick-banner position-absolute">
-                  <span>"for the next story"라는 캐치프레이즈 아래,<br />전문성을 갖춘 인재들이 최고의 결과로 함께 성장해 나갑니다.</span>
+                  <span
+                    >"for the next story"라는 <br class="d-block d-md-none" />캐치프레이즈 아래,<br class="d-none d-md-block" />
+                    전문성을 갖춘 인재들이 <br class="d-block d-md-none" />최고의 결과로 함께 성장해 나갑니다.</span
+                  >
                   <span>다수의 보안 전문기업의 파트너쉽 관계를 유지하여,<br />고객 No.1 서비스와 지속적인 가치 창출로 시장의 리더로 성장하고 있습니다.</span>
                 </div>
               </div>
               <div class="position-relative">
-                <div class="back-img back-img-3"></div>
+                <!-- <div class="back-img back-img-3"></div> -->
+                <div class="back-video">
+                  <video src="/src/assets/video/5.mp4" autoplay muted loop></video>
+                </div>
                 <div class="slick-banner position-absolute">
-                  <span>악성 봇(Bot)으로부터 웹사이트와 애플리케이션을 보호하는<br />강력한 보안 솔루션을 제공합니다.</span>
+                  <span
+                    >악성 봇(Bot)으로부터 웹사이트와 <br class="d-block d-md-none" />애플리케이션을 보호하는<br class="d-none d-md-block" />
+                    강력한 <br class="d-block d-md-none" />보안 솔루션을 제공합니다.</span
+                  >
                   <span>첨단 인공지능(AI/ML) 기술을 활용해 정상적인 사용자와 악성 봇(Bot)을 구분하며,<br />실시간으로 위협을 탐지하고 차단합니다.</span>
                 </div>
               </div>
@@ -210,8 +225,8 @@
               <p class="right">NEXT STORY</p>
             </div>
 
-            <div class="business-content container">
-              <div class="col-7">
+            <div class="business-content container flex-column-reverse row-gap-5 flex-md-row row-gap-md-0">
+              <div class="col-12 col-md-7">
                 <div class="no" data-aos="fade-right" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">BUSINESS 01</div>
                 <div class="title" data-aos="fade-right" data-aos-offset="50" data-aos-delay="200" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">실시간 악성 봇(매크로) 탐지/방어</div>
                 <div class="desc" data-aos="fade-right" data-aos-offset="50" data-aos-delay="300" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
@@ -225,7 +240,7 @@
                   </button>
                 </div>
               </div>
-              <div class="col-5 img-cont overflow-hidden">
+              <div class="col-12 col-md-5 img-cont overflow-hidden">
                 <img src="/src/assets/img/business-01.png" alt="" data-aos="zoom-out" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom" />
               </div>
             </div>
@@ -254,8 +269,8 @@
       </div>
     </div>
     <div id="footer">
-      <div class="footer-inner">
-        <div class="footer-left">
+      <div class="footer-inner d-flex flex-column-reverse d-md-flex flex-md-row">
+        <div class="footer-left col-12 col-md-6">
           <div class="footer-logo">
             <img src="/src/assets/img/white-full-logo.png" alt="test" />
           </div>
@@ -267,9 +282,8 @@
               <li><a href="/contact/contact.html">Contact Us</a></li>
             </ul>
             <div class="footer-info-item">
-              <span class="sub">(07332) 서울 영등포구 여의도동 의사당대로1길 11 대우매종리브르 1112호</span>
-            </div>
-            <div class="footer-info-item">
+              <span class="sub">(07332) 서울 영등포구 여의도동 의사당대로1길 11 <br class="d-block d-md-none" />대우매종리브르 1112호</span>
+              <br />
               <span class="title">전화번호.</span>
               <span class="sub">02-6953-4490</span>
               <span class="title ms-4">팩스.</span>
@@ -280,7 +294,7 @@
             </div>
           </div>
         </div>
-        <div class="footer-right">
+        <div class="footer-right col-12 col-md-6">
           <div class="copyright">
             <div>for the next story</div>
             <div>혁신적인 기술과 고객 중심의 서비스 기업<br />(주)네스토리</div>

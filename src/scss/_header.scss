@@ -1,16 +1,21 @@
-.header {
+#header {
   width: 100%;
 }
 
 .header-inner {
+  max-width: 1920px;
   width: 100%;
   height: 100px;
   position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
   transition: all 0.5s;
   overflow: hidden;
 
   &.menuOn {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
     .header-contents {
       .logo {
         .white-logo {
@@ -292,11 +297,22 @@
 
       > li {
         border-bottom: 1px solid #f1f1f1;
-        display: flex;
         align-items: center;
         padding: 2rem 0;
 
         &:hover {
+          > a {
+            color: #2478d7;
+            padding-left: 3rem;
+
+            &::before {
+              left: 0;
+              opacity: 1;
+            }
+          }
+        }
+
+        &.on {
           > a {
             color: #2478d7;
             padding-left: 3rem;
@@ -322,7 +338,7 @@
             width: 15px;
             height: 15px;
             border-radius: 4px;
-            transform: rotate(45deg) translateY(-70%);
+            transform: rotate(45deg) translateY(-50%);
             display: block;
             background-color: #2478d7;
             position: absolute;
@@ -335,19 +351,76 @@
         }
 
         .depth2 {
-          display: flex;
-
           > li {
             margin-right: 2rem;
 
             > a {
               color: #666;
-              font-size: 1.2rem;
+              font-size: 1.1rem;
 
               &:hover {
                 color: #2478d7;
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    height: 80px;
+
+    .header-contents {
+      height: 100%;
+      align-items: center;
+
+      .logo {
+        > a {
+          > img {
+            max-height: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  .header-menu {
+    .nav {
+      .depth1 {
+        > li {
+          > a {
+            font-size: 2.5rem;
+          }
+
+          .depth2 {
+            margin-top: 2rem;
+            display: none;
+
+            > li {
+              margin-bottom: 1rem;
+
+              > a {
+                font-size: 1.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header-menu {
+    .nav {
+      .depth1 {
+        > li {
+          .depth2 {
+            display: flex !important;
+            height: auto !important;
           }
         }
       }
