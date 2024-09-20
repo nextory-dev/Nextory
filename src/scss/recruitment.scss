@@ -26,8 +26,6 @@
     row-gap: 5rem;
 
     .item {
-      width: calc(50% - 2rem);
-
       .title {
         font-size: 1.2rem;
         color: #fff;
@@ -173,6 +171,75 @@
         font-size: 1rem;
         color: #fff;
         margin-top: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section-1 {
+    padding-top: 5rem;
+  }
+
+  .section-2 {
+    .list {
+      .item {
+        .title {
+          font-size: 2.5rem;
+        }
+        .sub-title {
+          font-size: 1.3rem;
+        }
+        .desc {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+
+  .section-3 {
+    .recruit-flow {
+      > ul {
+        padding: 40px 10px;
+        
+        > li {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+
+  .section-4 {
+    .benefits-list {
+      gap: 1rem 2rem;
+
+      > li {
+        width: 100%;
+
+        .title {
+          font-size: 1.5rem;
+        }
+
+        .desc {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
+  .section-5 {
+    .text-box-list {
+      .info {
+        padding: 3.5rem;
+
+        .title {
+          font-size: 1.3rem;
+        }
+
+        .sub {
+          font-size: 1.5rem;
+        }
       }
     }
   }

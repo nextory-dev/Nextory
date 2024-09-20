@@ -1,9 +1,9 @@
 .main-inner {
   max-width: 1920px;
   margin: 0 auto;
-  
+
   &.layout-inner {
-    padding-top: 200px;
+    padding-top: 13rem;
   }
 
   .page-title {
@@ -78,6 +78,24 @@
 
 @media (max-width: 768px) {
   .main-inner {
+    .page-title {
+      .title {
+        > span {
+          font-size: 2.8rem;
+        }
+      }
+      .bread-crumbs {
+        > li {
+          i {
+            font-size: 1rem;
+          }
+
+          span {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
 
     .contents {
       padding-bottom: 15rem;

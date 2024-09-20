@@ -14,35 +14,38 @@
   .box-list {
     color: #fff;
 
-    .img-cont {
-      width: 100px;
-      height: 100px;
-      background-color: #181d2a;
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    > li {
+      .img-cont {
+        width: 100px;
+        height: 100px;
+        background-color: #181d2a;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1.5rem;
 
-      > img {
-        width: 60px;
-      }
-    }
-
-    .train {
-      width: 20px;
-      height: 20px;
-      color: #fff;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 20px;
-      font-size: 0.8rem;
-
-      &.train-9 {
-        background-color: #b58a00;
+        > img {
+          width: 60px;
+        }
       }
 
-      &.train-5 {
-        background-color: #6b2d99;
+      .train {
+        width: 20px;
+        height: 20px;
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 20px;
+        font-size: 0.8rem;
+
+        &.train-9 {
+          background-color: #b58a00;
+        }
+
+        &.train-5 {
+          background-color: #6b2d99;
+        }
       }
     }
   }
@@ -123,11 +126,13 @@
       label {
         cursor: pointer;
         margin-right: 1rem;
+        font-size: 1rem;
       }
 
       a {
         color: #fff;
         text-decoration: underline;
+        font-size: 1rem;
       }
 
       button {
@@ -135,6 +140,58 @@
         background-color: #fac001;
         color: #fff;
         padding: 0.2rem 1rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section-1 {
+    padding-top: 5rem;
+
+    .map-container {
+      height: 300px;
+    }
+
+    .box-list {
+      > li {
+        .img-cont {
+          margin-right: 2rem;
+        }
+
+        .info-cont {
+          font-size: 1.3rem;
+
+          .train {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+          }
+        }
+      }
+    }
+  }
+
+  .section-2 {
+    .form {
+      input[type="text"],
+      select,
+      textarea {
+        font-size: 1.5rem;
+      }
+
+      .btn-container {
+        label {
+          font-size: 1.5rem;
+        }
+
+        a {
+          font-size: 1.5rem;
+        }
+
+        button {
+          font-size: 1.5rem;
+        }
       }
     }
   }

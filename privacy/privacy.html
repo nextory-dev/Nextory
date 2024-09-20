@@ -34,8 +34,8 @@
     <!-- 코어 라이브러리 -->
   </head>
   <body>
-    <div class="header">
-      <div id="header" class="header-inner">
+    <div id="header">
+      <div id="header-inner" class="header-inner">
         <div class="header-contents">
           <div class="logo">
             <a href="/index.html">
@@ -43,7 +43,7 @@
               <img class="color-logo" src="/src/assets/img/color-full-logo.png" alt="" />
             </a>
           </div>
-          <nav class="nav">
+          <nav class="nav d-none d-md-block">
             <ul class="depth1">
               <li class="menu-item">
                 <!-- li 에 이벤트 -->
@@ -105,9 +105,9 @@
       <div id="header-menu" class="header-menu">
         <nav class="nav">
           <ul class="depth1">
-            <li>
+            <li class="d-block d-md-flex">
               <a href="/about/summary.html">회사소개</a>
-              <ul class="depth2">
+              <ul class="depth2 d-md-flex">
                 <li>
                   <a href="/about/summary.html">회사개요</a>
                 </li>
@@ -116,17 +116,17 @@
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="d-block d-md-flex">
               <a href="/business/botfender.html">사업소개</a>
-              <ul class="depth2">
+              <ul class="depth2 d-md-flex">
                 <li>
                   <a href="/business/botfender.html">BotfenderAI</a>
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="d-block d-md-flex">
               <a href="/recruitment/recruitment.html">인재채용</a>
-              <ul class="depth2">
+              <ul class="depth2 d-md-flex">
                 <li>
                   <a href="/recruitment/recruitment.html">인재상</a>
                   <!-- <a href="/recruitment/recruitment.html?t=ideal">인재상</a> -->
@@ -174,8 +174,8 @@
               ㈜네스토리(이하 ‘네스토리’ 또는 ‘회사’라 함)의 기업홈페이지(https://www.nestory.co.kr)는 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 개인정보보호법 등 정보통신서비스 제공자가 준수하여야 할 관련 법령상의 개인정보보호 규정을 준수하며, 관련 법령에 의거한 개인정보처리방침을 정하여 이용자의 정보보호에 최선을 다하고 있습니다.<br />
               회사의 개인정보처리방침은 다음과 같은 내용을 담고 있습니다.
             </div>
-            <div class="d-flex mt-5">
-              <div class="col-5">
+            <div class="d-flex mt-5 flex-column row-gap-5 flex-md-row row-gap-md-0">
+              <div class="col-12 col-md-5">
                 <span class="color-text">개인정보의 수집 및 이용목적</span><br />
 
                 회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br />
@@ -208,7 +208,7 @@
                 - 전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.<br />
                 - 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다.<br />
               </div>
-              <div class="col-5 offset-2">
+              <div class="col-12 offset-0 col-md-5 offset-md-2">
                 <span class="color-text">이용자와 법정대리인의 권리・의무 및 행사방법</span><br />
                 <br />
                 이용자 및 법정 대리인은 언제든지 등록되어 있는 자신 혹은 당해 만 14세 미만 아동의 개인정보를 조회하거나 수정할 수 있으며 정보삭제를 요청할 수도 있습니다.<br />
@@ -247,8 +247,8 @@
       </div>
     </div>
     <div id="footer">
-      <div class="footer-inner">
-        <div class="footer-left">
+      <div class="footer-inner d-flex flex-column-reverse d-md-flex flex-md-row">
+        <div class="footer-left col-12 col-md-6">
           <div class="footer-logo">
             <img src="/src/assets/img/white-full-logo.png" alt="test" />
           </div>
@@ -260,9 +260,8 @@
               <li><a href="/contact/contact.html">Contact Us</a></li>
             </ul>
             <div class="footer-info-item">
-              <span class="sub">(07332) 서울 영등포구 여의도동 의사당대로1길 11 대우매종리브르 1112호</span>
-            </div>
-            <div class="footer-info-item">
+              <span class="sub">(07332) 서울 영등포구 여의도동 의사당대로1길 11 <br class="d-block d-md-none" />대우매종리브르 1112호</span>
+              <br />
               <span class="title">전화번호.</span>
               <span class="sub">02-6953-4490</span>
               <span class="title ms-4">팩스.</span>
@@ -273,7 +272,7 @@
             </div>
           </div>
         </div>
-        <div class="footer-right">
+        <div class="footer-right col-12 col-md-6">
           <div class="copyright">
             <div>for the next story</div>
             <div>혁신적인 기술과 고객 중심의 서비스 기업<br />(주)네스토리</div>
@@ -309,6 +308,21 @@
     .color-text {
       color: #fac001;
       font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      .section-1 {
+        padding-top: 5rem;
+        font-size: 1.3rem;
+      }
+
+      .title-text {
+        font-size: 2rem;
+      }
+
+      .color-text {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </html>

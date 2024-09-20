@@ -35,8 +35,8 @@
     <!-- 코어 라이브러리 -->
   </head>
   <body>
-    <div class="header">
-      <div id="header" class="header-inner">
+    <div id="header">
+      <div id="header-inner" class="header-inner">
         <div class="header-contents">
           <div class="logo">
             <a href="/index.html">
@@ -44,7 +44,7 @@
               <img class="color-logo" src="/src/assets/img/color-full-logo.png" alt="" />
             </a>
           </div>
-          <nav class="nav">
+          <nav class="nav d-none d-md-block">
             <ul class="depth1">
               <li class="menu-item">
                 <!-- li 에 이벤트 -->
@@ -106,9 +106,9 @@
       <div id="header-menu" class="header-menu">
         <nav class="nav">
           <ul class="depth1">
-            <li>
+            <li class="d-block d-md-flex">
               <a href="/about/summary.html">회사소개</a>
-              <ul class="depth2">
+              <ul class="depth2 d-md-flex">
                 <li>
                   <a href="/about/summary.html">회사개요</a>
                 </li>
@@ -117,17 +117,17 @@
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="d-block d-md-flex">
               <a href="/business/botfender.html">사업소개</a>
-              <ul class="depth2">
+              <ul class="depth2 d-md-flex">
                 <li>
                   <a href="/business/botfender.html">BotfenderAI</a>
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="d-block d-md-flex">
               <a href="/recruitment/recruitment.html">인재채용</a>
-              <ul class="depth2">
+              <ul class="depth2 d-md-flex">
                 <li>
                   <a href="/recruitment/recruitment.html">인재상</a>
                   <!-- <a href="/recruitment/recruitment.html?t=ideal">인재상</a> -->
@@ -194,32 +194,32 @@
                 marker.setMap(map);
               </script>
             </div>
-            <ul class="d-flex justify-content-between box-list mt-5" data-aos="fade-in" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+            <ul class="box-list d-flex justify-content-between mt-5 flex-column flex-md-row" data-aos="fade-in" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
               <li class="p-2 d-flex align-items-center">
-                <div class="me-4 img-cont">
+                <div class="img-cont">
                   <img src="/src/assets/img/icon/gps.png" alt="" />
                 </div>
-                <div class="d-flex flex-column">
+                <div class="info-cont d-flex flex-column">
                   <p>주소</p>
                   <div>(07332) 서울 영등포구 여의도동 의사당대로1길 11</div>
                   <div>대우메종오피스텔 1112호</div>
                 </div>
               </li>
               <li class="p-2 d-flex align-items-center">
-                <div class="me-4 img-cont">
+                <div class="img-cont">
                   <img src="/src/assets/img/icon/telephone.png" alt="" />
                 </div>
-                <div class="d-flex flex-column">
+                <div class="info-cont d-flex flex-column">
                   <p>연락처</p>
                   <div>T. 02-6953-4490</div>
                   <div>F. 02-786-4490</div>
                 </div>
               </li>
               <li class="p-2 d-flex align-items-center">
-                <div class="me-4 img-cont">
+                <div class="img-cont">
                   <img src="/src/assets/img/icon/train.png" alt="" />
                 </div>
-                <div class="d-flex flex-column">
+                <div class="info-cont d-flex flex-column">
                   <p>지하철 이용 시</p>
                   <div class="d-flex align-items-center">
                     <div class="train train-9 me-2">9</div>
@@ -239,11 +239,11 @@
               <div data-aos="fade-up" data-aos-offset="50" data-aos-delay="200" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">제품관련 문의는 모든 항목을 작성해 주셔야 합니다.</div>
               <div data-aos="fade-up" data-aos-offset="50" data-aos-delay="300" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">빠르고 친절하게 답변 드리겠습니다.</div>
             </div>
-            <div class="d-flex">
-              <div class="col-6 overflow-hidden">
+            <div class="d-flex flex-column row-gap-5 flex-md-row row-gap-md-0">
+              <div class="col-12 col-md-6 overflow-hidden">
                 <img class="w-100" src="/src/assets/img/contact/01.png" alt="" data-aos="zoom-out" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom" />
               </div>
-              <div class="col-6 form ps-4 d-flex flex-wrap align-items-start" data-aos="fade-in" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+              <div class="col-12 col-md-6 form ps-0 ps-md-4 d-flex flex-wrap align-items-start" data-aos="fade-in" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
                 <input type="text" id="company" class="w-100" placeholder="기업/기관명" />
                 <input type="text" id="name" class="left" placeholder="성명" />
                 <input type="text" id="contact" class="right" placeholder="연락처" />
@@ -274,9 +274,9 @@
         </div>
       </div>
     </div>
-    <div id="footer">
-      <div class="footer-inner">
-        <div class="footer-left">
+   <div id="footer">
+      <div class="footer-inner d-flex flex-column-reverse d-md-flex flex-md-row">
+        <div class="footer-left col-12 col-md-6">
           <div class="footer-logo">
             <img src="/src/assets/img/white-full-logo.png" alt="test" />
           </div>
@@ -288,9 +288,8 @@
               <li><a href="/contact/contact.html">Contact Us</a></li>
             </ul>
             <div class="footer-info-item">
-              <span class="sub">(07332) 서울 영등포구 여의도동 의사당대로1길 11 대우매종리브르 1112호</span>
-            </div>
-            <div class="footer-info-item">
+              <span class="sub">(07332) 서울 영등포구 여의도동 의사당대로1길 11 <br class="d-block d-md-none" />대우매종리브르 1112호</span>
+              <br />
               <span class="title">전화번호.</span>
               <span class="sub">02-6953-4490</span>
               <span class="title ms-4">팩스.</span>
@@ -301,7 +300,7 @@
             </div>
           </div>
         </div>
-        <div class="footer-right">
+        <div class="footer-right col-12 col-md-6">
           <div class="copyright">
             <div>for the next story</div>
             <div>혁신적인 기술과 고객 중심의 서비스 기업<br />(주)네스토리</div>

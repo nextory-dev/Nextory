@@ -35,31 +35,31 @@
     row-gap: 5rem;
 
     .item {
-        width: calc(50% - 2rem);
+      width: calc(50% - 2rem);
 
-        .img-cont {
-            width: 100%;
-            overflow: hidden;
-            border-radius: 30px;
+      .img-cont {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 30px;
 
-            img {
-                width: 100%;
-            }
+        img {
+          width: 100%;
         }
+      }
 
-        .sub {
-            font-size: 1.2rem;
-            color: #fff;
-            margin-top: 1rem;
-        }
+      .sub {
+        font-size: 1.2rem;
+        color: #fff;
+        margin-top: 1rem;
+      }
 
-        .desc {
-            list-style: disc;
-            font-size: 1rem;
-            color: #fff;
-            margin-top: 1rem;
-            padding-left: 1rem;
-        }
+      .desc {
+        list-style: disc;
+        font-size: 1rem;
+        color: #fff;
+        margin-top: 1rem;
+        padding-left: 1rem;
+      }
     }
   }
 }
@@ -102,5 +102,46 @@
     color: #fff;
     padding-left: 1rem;
     margin-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-1 {
+    padding-top: 5rem;
+  }
+
+  .section-2 {
+    > .title {
+      font-size: 2.8rem;
+    }
+
+    .sub-title {
+      font-size: 1.5rem;
+    }
+
+    .list {
+      .item {
+        width: 100%;
+
+        .sub {
+          font-size: 2rem;
+        }
+
+        .desc {
+          font-size: 1.5rem;
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+
+  .section-4 {
+    .sub-title {
+      font-size: 2rem;
+    }
+    .desc {
+      font-size: 1.5rem;
+      margin-left: 2rem;
+    }
   }
 }
