@@ -38,7 +38,9 @@ $(document).ready(function () {
     .on("scroll", function () {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
       
-      if(scrollTop > 50) $header.toggleClass("fix");
-      else $header.toggleClass("fix");
+      console.error('scrollTop',scrollTop);
+      
+      if(scrollTop > 50) $header.addClass("fix");
+      else $header.removeClass("fix");
     });
 });
