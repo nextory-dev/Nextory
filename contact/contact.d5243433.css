@@ -2,6 +2,38 @@
   color: #fff;
 }
 
+.section-1 .box-list .img-cont {
+  width: 100px;
+  height: 100px;
+  background-color: #181d2a;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.section-1 .box-list .img-cont > img {
+  width: 60px;
+}
+
+.section-1 .box-list .train {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  font-size: .8rem;
+  line-height: 20px;
+}
+
+.section-1 .box-list .train.train-9 {
+  background-color: #b58a00;
+}
+
+.section-1 .box-list .train.train-5 {
+  background-color: #6b2d99;
+}
+
 .section-2 {
   margin-top: 10rem;
 }
