@@ -1,5 +1,14 @@
 .section-1 {
   .map-container {
+    height: 400px;
+    width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+
+    .map {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .box-list {
@@ -8,13 +17,13 @@
     .img-cont {
       width: 100px;
       height: 100px;
-      background-color: #181D2A;
+      background-color: #181d2a;
       border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
 
-      >img {
+      > img {
         width: 60px;
       }
     }
@@ -26,14 +35,14 @@
       border-radius: 50%;
       text-align: center;
       line-height: 20px;
-      font-size: .8rem;
+      font-size: 0.8rem;
 
       &.train-9 {
-        background-color: #B58A00;
+        background-color: #b58a00;
       }
 
       &.train-5 {
-        background-color: #6B2D99;
+        background-color: #6b2d99;
       }
     }
   }
@@ -87,11 +96,11 @@
       justify-content: space-between;
       width: 100%;
 
-     /* 기본 체크박스 숨기기 */
-    input[type="checkbox"] {
+      /* 기본 체크박스 숨기기 */
+      input[type="checkbox"] {
         display: none;
       }
-  
+
       /* 커스텀 체크박스 스타일 */
       .custom-checkbox {
         display: inline-block;
@@ -102,9 +111,9 @@
         border-radius: 4px;
         position: relative;
         cursor: pointer;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
       }
-  
+
       /* 체크박스가 체크되었을 때 */
       input[type="checkbox"]:checked + .custom-checkbox {
         background-color: #fac001;
@@ -125,7 +134,7 @@
         border-radius: 10px;
         background-color: #fac001;
         color: #fff;
-        padding: .2rem 1rem;
+        padding: 0.2rem 1rem;
       }
     }
   }

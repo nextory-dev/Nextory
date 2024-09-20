@@ -25,6 +25,7 @@
     <!-- <script src="/src/assets/lib/slick/slick.min.js"></script> -->
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="/src/assets/lib/aos/aos.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- 외부 라이브러리 -->
 
     <!-- 코어 라이브러리 -->
@@ -38,7 +39,7 @@
       <div id="header" class="header-inner">
         <div class="header-contents">
           <div class="logo">
-            <a href="/">
+            <a href="/index.html">
               <img class="white-logo" src="/src/assets/img/white-full-logo.png" alt="" />
               <img class="color-logo" src="/src/assets/img/color-full-logo.png" alt="" />
             </a>
@@ -170,26 +171,33 @@
         <div class="contents container">
           <section class="section-1">
             <div class="map-container">
-              <div id="map" style="width: 100%; height: 400px"></div>
-              <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a1cc041ff5b2815990e83abf8548f336">
-                $(document).ready(function() {
-                  let container = document.getElementById("map"); //지도를 담을 영역의 DOM 레퍼런스
-                  console.error(container);
-                  
-                  let options = {
-                    //지도를 생성할 때 필요한 기본 옵션
-                    center: new kakao.maps.LatLng(37.5192120330535, 126.928582231249), //지도의 중심좌표.
-                    level: 3, //지도의 레벨(확대, 축소 정도)
-                  };
+              <div id="map" class="map" data-aos="zoom-out" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom"></div>
+              <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a1cc041ff5b2815990e83abf8548f336"></script>
+              <script>
+                let container = document.getElementById("map");
+                let options = {
+                  center: new kakao.maps.LatLng(37.5192120330535, 126.928582231249),
+                  level: 3,
+                };
 
-                  let map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+                let map = new kakao.maps.Map(container, options);
+
+                // 마커가 표시될 위치입니다
+                let markerPosition = new kakao.maps.LatLng(37.5192120330535, 126.928582231249);
+
+                // 마커를 생성합니다
+                let marker = new kakao.maps.Marker({
+                  position: markerPosition,
                 });
+
+                // 마커가 지도 위에 표시되도록 설정합니다
+                marker.setMap(map);
               </script>
             </div>
             <ul class="d-flex justify-content-between box-list mt-5" data-aos="fade-in" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
               <li class="p-2 d-flex align-items-center">
                 <div class="me-4 img-cont">
-                  <img src="/src/assets/img/icon/gps.png" alt="">
+                  <img src="/src/assets/img/icon/gps.png" alt="" />
                 </div>
                 <div class="d-flex flex-column">
                   <p>주소</p>
@@ -199,7 +207,7 @@
               </li>
               <li class="p-2 d-flex align-items-center">
                 <div class="me-4 img-cont">
-                  <img src="/src/assets/img/icon/telephone.png" alt="">
+                  <img src="/src/assets/img/icon/telephone.png" alt="" />
                 </div>
                 <div class="d-flex flex-column">
                   <p>연락처</p>
@@ -209,12 +217,18 @@
               </li>
               <li class="p-2 d-flex align-items-center">
                 <div class="me-4 img-cont">
-                  <img src="/src/assets/img/icon/train.png" alt="">
+                  <img src="/src/assets/img/icon/train.png" alt="" />
                 </div>
                 <div class="d-flex flex-column">
                   <p>지하철 이용 시</p>
-                  <div class="d-flex align-items-center"><div class="train train-9 me-2">9</div>샛강역 1번 출구 도보 5분 거리</div>
-                  <div class="d-flex align-items-center"><div class="train train-5 me-2">5</div>여의도역 5번 출구 도보 10분 거리</div>
+                  <div class="d-flex align-items-center">
+                    <div class="train train-9 me-2">9</div>
+                    <span>샛강역 1번 출구 도보 5분 거리</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="train train-5 me-2">5</div>
+                    <span>여의도역 5번 출구 도보 10분 거리</span>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -230,10 +244,10 @@
                 <img class="w-100" src="/src/assets/img/contact/01.png" alt="" data-aos="zoom-out" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom" />
               </div>
               <div class="col-6 form ps-4 d-flex flex-wrap align-items-start" data-aos="fade-in" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
-                <input type="text" class="w-100" placeholder="기업/기관명" />
-                <input type="text" class="left" placeholder="성명" />
-                <input type="text" class="right" placeholder="연락처" />
-                <select name="" id="" class="left">
+                <input type="text" id="company" class="w-100" placeholder="기업/기관명" />
+                <input type="text" id="name" class="left" placeholder="성명" />
+                <input type="text" id="contact" class="right" placeholder="연락처" />
+                <select name="" id="path" class="left">
                   <option value="" disabled selected>유입경로</option>
                   <option value="온라인 검색">온라인 검색</option>
                   <option value="지인추천">지인추천</option>
@@ -241,8 +255,8 @@
                   <option value="언론기사">언론기사</option>
                   <option value="기타">기타</option>
                 </select>
-                <input type="text" class="right" placeholder="이메일" />
-                <textarea name="" id="" class="w-100" rows="8" placeholder="문의내용"></textarea>
+                <input type="text" id="email" class="right" placeholder="이메일" />
+                <textarea name="" id="contents" class="w-100" rows="8" placeholder="문의내용"></textarea>
                 <div class="btn-container">
                   <div class="d-flex align-items-center">
                     <input type="checkbox" name="" id="check" />
@@ -251,7 +265,7 @@
                     <a href="/privacy/privacy.html" target="_blank">내용보기</a>
                   </div>
                   <div>
-                    <button>문의하기</button>
+                    <button id="send-btn">문의하기</button>
                   </div>
                 </div>
               </div>
@@ -294,7 +308,7 @@
           </div>
           <div class="pdf-container">
             <button>
-              <a href="">회사소개서</a>
+              <a id="download-link" href="">회사소개서</a>
             </button>
           </div>
         </div>
@@ -303,5 +317,67 @@
         </div>
       </div>
     </div>
+
+    <script>
+      (function () {
+        emailjs.init({
+          publicKey: "1wcs0MqB2sGqdl4jy",
+        });
+
+        const $sendBtn = $("#send-btn");
+        $sendBtn.off().on("click", function () {
+          if ($("#company").val() == "") {
+            alert("기업/기관명을 입력해주세요.");
+            return false;
+          }
+          if ($("#name").val() == "") {
+            alert("성명을 입력해주세요.");
+            return false;
+          }
+          if ($("#contact").val() == "") {
+            alert("연락처를 입력해주세요.");
+            return false;
+          }
+          if (!$("#path").val()) {
+            alert("유입경로를 선택해주세요.");
+            return false;
+          }
+          if ($("#email").val() == "") {
+            alert("이메일을 입력해주세요.");
+            return false;
+          }
+          if ($("#contents").val() == "") {
+            alert("문의내용을 입력해주세요.");
+            return false;
+          }
+          if (!$("#check").is(":checked")) {
+            alert("개인정보 수집 및 이용에 동의가 필요합니다.");
+            return false;
+          }
+
+          if (confirm("문의 메일을 전송하시겠습니까?")) {
+            let templateParams = {
+              company: $("#company").val(),
+              name: $("#name").val(),
+              contact: $("#contact").val(),
+              path: $("#path").val(),
+              email: $("#email").val(),
+              contents: $("#contents").val(),
+            };
+
+            console.error("templateParams", templateParams);
+
+            emailjs.send("nextory", "nextory_template", templateParams).then(
+              function (response) {
+                console.log("SUCCESS!", response.status, response.text);
+              },
+              function (err) {
+                console.log("FAILED...", err);
+              }
+            );
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

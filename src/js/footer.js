@@ -8,4 +8,10 @@ $(document).ready(function () {
       800
     );
   });
+
+  const $downloadLink = $("#download-link");
+  $downloadLink.off().on("click", function (e) {
+    e.preventDefault();
+    alert("준비중입니다.");
+  });
 });
