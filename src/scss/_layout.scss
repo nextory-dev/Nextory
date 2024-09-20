@@ -23,11 +23,11 @@
         width: 2.5rem;
         height: 2.5rem;
         border-radius: 50%;
-        background-color: #fac001;
+        background-color: rgba($color: #fac001, $alpha: 0.6);
         display: block;
         position: absolute;
         right: -1rem;
-        top: -.5rem;
+        top: -0.5rem;
         z-index: -1;
         opacity: 0;
         transform: translateY(100%);
@@ -60,9 +60,9 @@
         }
 
         &:last-of-type {
-           span {
+          span {
             color: #fff;
-           }
+          }
         }
       }
     }

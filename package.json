@@ -1,5 +1,11 @@
 {
+  "scripts": {
+    "start": "parcel index.html",
+   "build": "parcel build index.html --dist-dir dist --public-url Nextory",
+    "deploy": "gh-pages -d dist"
+  },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.8.3"
+    "@parcel/transformer-sass": "2.8.3",
+    "gh-pages": "^6.1.1"
   }
 }
