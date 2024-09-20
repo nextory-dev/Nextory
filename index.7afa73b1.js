@@ -1,16 +1,16 @@
 $(document).ready(function() {
-    const $header = $("#header");
+    const $headerInner = $("#header-inner");
     const $headerMenu = $("#header-menu");
     const $menuBtn = $("#menu-btn");
     let allMenuFlag = false;
-    $header.find(".menu-item").off().on("mouseenter mouseleave", function(e) {
+    $headerInner.find(".menu-item").off().on("mouseenter mouseleave", function(e) {
         let type = e.type;
         switch(type){
             case "mouseenter":
-                $header.addClass("on");
+                $headerInner.addClass("on");
                 break;
             case "mouseleave":
-                $header.removeClass("on");
+                $headerInner.removeClass("on");
                 break;
             default:
                 break;
@@ -18,17 +18,26 @@ $(document).ready(function() {
     });
     $menuBtn.off().on("click", function() {
         $menuBtn.toggleClass("on");
-        $header.toggleClass("menuOn");
+        $headerInner.toggleClass("menuOn");
         $headerMenu.toggleClass("on");
         allMenuFlag = !allMenuFlag;
         $("body").toggleClass("hidden");
         allMenuFlag;
     });
+    $headerMenu.find(".depth1 > li > a").on("click", function(e) {
+        let depth2 = $(this).siblings(".depth2");
+        if (depth2.length) {
+            e.preventDefault();
+            $(this).parent().siblings().removeClass("on");
+            $headerMenu.find(".depth2").stop().slideUp();
+            $(this).parent().toggleClass("on");
+            depth2.stop().slideToggle();
+        }
+    });
     $(window).off().on("scroll", function() {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        console.error("scrollTop", scrollTop);
-        if (scrollTop > 50) $header.addClass("fix");
-        else $header.removeClass("fix");
+        if (scrollTop > 50) $headerInner.addClass("fix");
+        else $headerInner.removeClass("fix");
     });
 });
 
