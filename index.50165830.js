@@ -5,6 +5,11 @@ $(document).ready(function() {
             scrollTop: 0
         }, 800);
     });
+    const $downloadLink = $("#download-link");
+    $downloadLink.off().on("click", function(e) {
+        e.preventDefault();
+        alert("준비중입니다.");
+    });
 });
 
 //# sourceMappingURL=index.50165830.js.map
