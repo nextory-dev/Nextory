@@ -1,0 +1,1 @@
+{"mappings":"AAKI","sources":["src/scss/location.scss"],"sourcesContent":[".section-1 {\n    .map-container {\n\n    }\n\n    .box-list {\n        color: #fff;\n    }\n}"],"names":[],"version":3,"file":"location.1645a9cc.css.map","sourceRoot":"/__parcel_source_root/"}
