@@ -92,6 +92,13 @@
 
         > a {
           color: #fff;
+          display: flex;
+          align-items: center;
+
+          >img {
+            width: 20px;
+            margin-left: 10px;
+          }
         }
       }
     }
