@@ -54,3 +54,8 @@ $(document).ready(function () {
     else $headerInner.removeClass("fix");
   }
 });
+
+function redirectRecruitment(event, t) {
+  event.preventDefault();
+  window.location.href = `/recruitment/recruitment.html?t=${t}`;
+}
