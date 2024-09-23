@@ -113,7 +113,7 @@
     row-gap: 3rem;
 
     > li {
-      background-color: #394558;
+      background-color: #232933;
       width: calc(50% - 1rem);
 
       &:nth-of-type(odd) {
@@ -122,6 +122,14 @@
 
       &:nth-of-type(even) {
         border-right: 0;
+      }
+
+      .img-cont {
+        max-width: 120px;
+
+        > img {
+          width: 100%;
+        }
       }
 
       .title {
@@ -157,6 +165,8 @@
       padding: 3.5rem 1rem;
 
       .img-cont {
+        max-width: 80px;
+
         > img {
           width: 100%;
         }

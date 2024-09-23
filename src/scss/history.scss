@@ -28,6 +28,9 @@
 
       .img {
         border-radius: 30px;
+        height: 450px;
+        display: flex;
+
         img {
           width: 100%;
         }
@@ -92,6 +95,7 @@
         color: #fff;
         width: calc(100% - 160px);
         padding-left: 40px;
+        word-break: keep-all;
 
         &.color {
           color: #fac001;

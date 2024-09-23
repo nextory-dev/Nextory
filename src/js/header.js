@@ -45,7 +45,6 @@ $(document).ready(function () {
   });
 
   $(window)
-    .off()
     .on("scroll", function () {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
