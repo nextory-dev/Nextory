@@ -73,6 +73,10 @@
 
   .contents {
     padding-bottom: 10rem;
+    overflow-x: hidden;
+    
+    > section {
+    }
   }
 }
 

@@ -44,11 +44,13 @@ $(document).ready(function () {
     }
   });
 
-  $(window)
-    .on("scroll", function () {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  $(window).on("scroll", updateHeaderState);
+  updateHeaderState();
 
-      if (scrollTop > 50) $headerInner.addClass("fix");
-      else $headerInner.removeClass("fix");
-    });
+  function updateHeaderState() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > 50) $headerInner.addClass("fix");
+    else $headerInner.removeClass("fix");
+  }
 });
