@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NEXTORY</title>
 
-    <meta name="description" content="For The Next Story">
+    <meta name="description" content="For The Next Story" />
     <!-- 기본 파비콘 (favicon.ico) -->
     <link rel="icon" href="/src/assets/img/icon/favicon.ico" type="image/x-icon" />
     <!-- PNG 파비콘 -->
@@ -18,12 +18,12 @@
     <!-- 타일 배경 색 -->
     <!-- iPhone X 이상에서 배경 색상 설정 -->
     <meta name="theme-color" content="#ffffff" />
-    
-    <meta property="og:title" content="Nextory">
-    <meta property="og:description" content="For The Next Story">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.nextory.co.kr">
-    <meta property="og:image" content="/src/assets/img/icon/thumbnail.jpeg">
+
+    <meta property="og:title" content="Nextory" />
+    <meta property="og:description" content="For The Next Story" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.nextory.co.kr" />
+    <meta property="og:image" content="/src/assets/img/icon/thumbnail.jpeg" />
 
     <meta name="naver-site-verification" content="d94ee5db97f816a7b86800adce21a2ece30b3a31" />
 
@@ -41,8 +41,8 @@
     <!-- 코어 스타일 -->
 
     <!-- 외부 라이브러리 -->
-    <!-- <script src="/src/assets/lib/jquery-3.7.1.min.js"></script> -->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="/src/assets/lib/aos/aos.js"></script>
     <!-- 외부 라이브러리 -->
@@ -170,7 +170,7 @@
               <div class="position-relative">
                 <!-- <div class="back-img back-img-1"></div> -->
                 <div class="back-video">
-                  <video src="/src/assets/video/6.mp4" autoplay muted loop></video>
+                  <video src="/src/assets/video/6.mp4" autoplay muted loop playsinline></video>
                 </div>
                 <div class="slick-banner banner-1 position-absolute">
                   <span>늘 창의적인 생각과 자유로운 사고로<br />새로운 스토리를 그려갑니다.</span>
@@ -180,7 +180,7 @@
               <div class="position-relative">
                 <!-- <div class="back-img back-img-2"></div> -->
                 <div class="back-video">
-                  <video src="/src/assets/video/7.mp4" autoplay muted loop></video>
+                  <video src="/src/assets/video/7.mp4" autoplay muted loop playsinline></video>
                 </div>
                 <div class="slick-banner banner-2 position-absolute">
                   <span
@@ -193,14 +193,17 @@
               <div class="position-relative">
                 <!-- <div class="back-img back-img-3"></div> -->
                 <div class="back-video">
-                  <video src="/src/assets/video/3.mp4" autoplay muted loop></video>
+                  <video src="/src/assets/video/3.mp4" autoplay muted loop playsinline></video>
                 </div>
                 <div class="slick-banner banner-3 position-absolute">
                   <span
                     >악성 봇(Bot)으로부터 웹사이트와 <br class="d-block d-md-none" />애플리케이션을 보호하는<br class="d-none d-md-block" />
                     강력한 <br class="d-block d-md-none" />보안 솔루션을 제공합니다.</span
                   >
-                  <span>첨단 인공지능(AI/ML) 기술을 활용해 정상적인 사용자와 악성 봇(Bot)을 구분하며,<br />실시간으로 위협을 탐지하고 차단합니다.</span>
+                  <span
+                    >첨단 인공지능(AI/ML) 기술을 활용해 정상적인 사용자와 <br class="d-block d-md-none" />악성 봇(Bot)을 구분하며,<br class="d-none d-md-block" />
+                    실시간으로 위협을 탐지하고 차단합니다.</span
+                  >
                 </div>
               </div>
             </div>
@@ -345,63 +348,72 @@
           arrows: false,
           speed: 1000,
           swipe: true,
+          touchMove: true,
           pauseOnFocus: false,
           focusOnSelect: false,
           pauseOnHover: false,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                // 추가 설정
+              },
+            },
+          ],
         });
 
         let scrollFlag = true;
-        $("#slick-container")
-          .off()
-          .on("DOMMouseScroll mousewheel touchstart touchend", function (e) {
-            if (!scrollFlag) {
-              return false;
-            }
-            scrollFlag = false;
-            var E = e.originalEvent;
-            var delta = E.wheelDelta;
-            var fireE = e.originalEvent.detail;
-            let eType = e.type;
-            console.log(eType);
+        $("#slick-container").on("DOMMouseScroll mousewheel", function (e) {
+          // e.preventDefault();
 
-            switch (eType) {
-              case "mousewheel":
-              case "DOMMouseScroll":
-                e.preventDefault();
-                console.log("delta", delta);
-                console.log("fireE", fireE);
-                if (!$(".dummy").length) {
-                  if (delta < 0 || fireE > 0) {
-                    htmlBodyAnimate($("#business-container").offset().top);
-                  } else {
-                    htmlBodyAnimate($("#slick-container").offset().top);
-                  }
-                }
-                break;
-              case "touchstart":
-                touchStart = e.originalEvent.changedTouches[0].screenY;
-                break;
-              case "touchend":
-                touchEnd = e.originalEvent.changedTouches[0].screenY;
-                let pageY = touchStart - touchEnd;
-                if (pageY > 0) {
-                  if (!$(".dummy").length) {
-                    htmlBodyAnimate($("#business-container").offset().top);
-                  }
+          if (!scrollFlag) {
+            return false;
+          }
+          scrollFlag = false;
+          var E = e.originalEvent;
+          var delta = E.wheelDelta;
+          var fireE = e.originalEvent.detail;
+          let eType = e.type;
+          console.log(eType);
+
+          switch (eType) {
+            case "mousewheel":
+            case "DOMMouseScroll":
+              e.preventDefault();
+              console.log("delta", delta);
+              console.log("fireE", fireE);
+              if (!$(".dummy").length) {
+                if (delta < 0 || fireE > 0) {
+                  htmlBodyAnimate($("#business-container").offset().top);
                 } else {
+                  htmlBodyAnimate($("#slick-container").offset().top);
                 }
-                break;
-              default:
-                break;
-            }
-          });
+              }
+              break;
+            case "touchstart":
+              touchStart = e.originalEvent.changedTouches[0].screenY;
+              break;
+            case "touchend":
+              touchEnd = e.originalEvent.changedTouches[0].screenY;
+              let pageY = touchStart - touchEnd;
+              if (pageY > 0) {
+                if (!$(".dummy").length) {
+                  htmlBodyAnimate($("#business-container").offset().top);
+                }
+              } else {
+              }
+              break;
+            default:
+              break;
+          }
+        });
 
         let dots = $("#slick-container").find(".slideDots button");
         $("#slick-banner-list")
           .off()
           .on("beforeChange", function (event, slick, currentSlide, nextSlide) {
-            console.error("beforeChange");
-
             dots.removeClass("on");
             dots.eq(nextSlide).addClass("on");
             dots.find(".bar").css({
