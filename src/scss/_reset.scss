@@ -7,6 +7,7 @@ html {
 
     * {
         box-sizing: border-box;
+        word-break: keep-all;
     }
 
     a {
@@ -29,6 +30,10 @@ html {
     em {
       font-style: normal;
       display: inline-block;
+    }
+
+    &.menuOn {
+      overflow-y: hidden !important;
     }
   }
 }

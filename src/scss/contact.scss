@@ -81,6 +81,7 @@
       resize: none;
       min-height: 42px;
       font-size: 1rem;
+      display: inline-block;
     }
 
     .left {
@@ -158,6 +159,10 @@
       > li {
         .img-cont {
           margin-right: 2rem;
+
+          > img {
+            width: 50px;
+          }
         }
 
         .info-cont {
@@ -182,15 +187,15 @@
 
       .btn-container {
         label {
-          font-size: 1.5rem;
+          font-size: 1.3rem;
         }
 
         a {
-          font-size: 1.5rem;
+          font-size: 1.3rem;
         }
 
         button {
-          font-size: 1.5rem;
+          font-size: 1.3rem;
         }
       }
     }

@@ -93,9 +93,8 @@
       .desc {
         font-size: 1.4rem;
         color: #fff;
-        width: calc(100% - 160px);
+        width: calc(100% - 110px);
         padding-left: 40px;
-        word-break: keep-all;
 
         &.color {
           color: #fac001;
@@ -108,5 +107,26 @@
 @media (max-width: 768px) {
   .section-1 {
     padding-top: 5rem;
+
+    .sticky-box {
+      > div {
+        .img {
+          max-height: 320px;
+          align-items: center;
+
+          > img {
+            margin-bottom: 100px;
+          }
+        }
+      }
+    }
+
+    .card-list {
+      >li {
+        .no {
+          padding-left: 15px;
+        }
+      }
+    }
   }
 }

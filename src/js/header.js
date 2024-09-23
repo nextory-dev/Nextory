@@ -2,6 +2,7 @@ $(document).ready(function () {
   const $headerInner = $("#header-inner");
   const $headerMenu = $("#header-menu");
   const $menuBtn = $("#menu-btn");
+  const $body = $('body');
   let allMenuFlag = false;
 
   $headerInner
@@ -25,6 +26,7 @@ $(document).ready(function () {
   $menuBtn.off().on("click", function () {
     $menuBtn.toggleClass("on");
     $headerInner.toggleClass("menuOn");
+    $body.toggleClass("menuOn");
     $headerMenu.toggleClass("on");
     allMenuFlag = !allMenuFlag;
     $("body").toggleClass("hidden");

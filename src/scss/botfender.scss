@@ -106,6 +106,14 @@
 }
 
 @media (max-width: 768px) {
+  .main-inner {
+    .page-title {
+      .title {
+        display: inline-block;
+      }
+    }
+  }
+
   .section-1 {
     padding-top: 5rem;
   }
@@ -129,7 +137,11 @@
 
         .desc {
           font-size: 1.5rem;
-          margin-left: 2rem;
+          margin-left: 1rem;
+
+          > li {
+            margin-bottom: 0.5rem;
+          }
         }
       }
     }
@@ -141,7 +153,11 @@
     }
     .desc {
       font-size: 1.5rem;
-      margin-left: 2rem;
+      margin-left: 1rem;
+
+      > li {
+        margin-bottom: 0.5rem;
+      }
     }
   }
 }

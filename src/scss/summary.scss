@@ -174,8 +174,9 @@
       }
 
       .desc {
-        margin-left: 60px;
+        padding-left: 60px;
         font-size: 1rem;
+        width: calc(100% - 90px);
 
         > li {
           color: #fff;
@@ -249,14 +250,20 @@
     padding-top: 5rem;
 
     .card-list {
-      >li {
+      > li {
         .img-box {
+          .img-cont {
+            .icon {
+              max-width: 80px;
+            }
+          }
 
           .no {
             font-size: 1.3rem;
           }
           .desc {
             font-size: 1.4rem;
+            max-width: calc(100% - 110px);
           }
         }
       }
@@ -265,6 +272,10 @@
 
   .section-3 {
     .left-box {
+      img {
+        max-width: 90%;
+      }
+
       .text {
         > span:nth-of-type(1) {
           font-size: 2rem;
@@ -278,7 +289,7 @@
     .vision-list {
       .vision-item {
         .desc {
-          margin-left: 30px;
+          padding-left: 30px;
           font-size: 1.1rem;
         }
       }
@@ -291,12 +302,13 @@
         > div {
           > div {
             .icon {
+              max-width: 60px;
             }
             .title {
-              font-size: 1.3rem;
+              font-size: 1.4rem;
             }
             .desc {
-              font-size: 1.7rem;
+              font-size: 1.5rem;
             }
           }
         }

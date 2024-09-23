@@ -138,13 +138,18 @@
 
     .footer-left {
       .footer-logo {
+        width: 30%;
+        padding-right: 20px;
+
         > img {
           max-height: 90px;
-          max-width: 120px;
+          max-width: 100%;
         }
       }
 
       .footer-info {
+        width: 70%;
+        
         .footer-link {
           > li {
             > a {
@@ -168,8 +173,8 @@
     }
 
     .footer-navigation {
-      bottom: 180px;
-      right: 20px;
+      bottom: 20px;
+      right: 15px;
     }
   }
 }
