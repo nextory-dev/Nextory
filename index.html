@@ -3,7 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nextory</title>
+    <title>NEXTORY</title>
+
+    <!-- 기본 파비콘 (favicon.ico) -->
+    <link rel="icon" href="/src/assets/img/icon/favicon.ico" type="image/x-icon" />
+    <!-- PNG 파비콘 -->
+    <link rel="icon" href="/src/assets/img/icon/favicon.png" type="image/png" sizes="32x32" />
+    <!-- Apple Touch Icon (iOS 홈 화면에 추가 시 아이콘) -->
+    <link rel="apple-touch-icon" href="/src/assets/img/icon/favicon.png" />
+    <!-- Android 및 Windows 타일 (144x144px 이상 권장) -->
+    <meta name="msapplication-TileImage" content="/src/assets/img/icon/favicon.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <!-- 타일 배경 색 -->
+    <!-- iPhone X 이상에서 배경 색상 설정 -->
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- 외부 스타일 -->
     <link rel="stylesheet" href="/src/assets/lib/fontawesome-free-6.6.0-web/css/all.min.css" />
@@ -19,7 +32,8 @@
     <!-- 코어 스타일 -->
 
     <!-- 외부 라이브러리 -->
-    <script src="/src/assets/lib/jquery-3.7.1.min.js"></script>
+    <!-- <script src="/src/assets/lib/jquery-3.7.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="/src/assets/lib/aos/aos.js"></script>
     <!-- 외부 라이브러리 -->
@@ -236,7 +250,7 @@
                   <img src="/src/assets/img/index/business-01.png" alt="image" data-aos="zoom-out" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom" />
                 </div>
                 <div class="icon">
-                  <img src="/src/assets/img/index/icon/business-01.png" alt="icon">
+                  <img src="/src/assets/img/index/icon/business-01.png" alt="icon" />
                 </div>
               </div>
             </div>
@@ -441,32 +455,30 @@
         let slideText = $(".slide-text");
         let winH = window.innerHeight;
         let winW = window.innerWidth;
-        $(window)
-          .off()
-          .on("scroll", function (e) {
-            let eType = e.type;
-            let yScroll = window.scrollY;
-            let busiPadding = parseInt(business.css("paddingTop").replace("px", ""));
-            // let busiHeight = business.innerHeight();
-            winW = window.innerWidth;
-            winH = window.innerHeight;
+        $(window).on("scroll", function (e) {
+          let eType = e.type;
+          let yScroll = window.scrollY;
+          let busiPadding = parseInt(business.css("paddingTop").replace("px", ""));
+          // let busiHeight = business.innerHeight();
+          winW = window.innerWidth;
+          winH = window.innerHeight;
 
-            if (business.offset().top <= yScroll + busiPadding) {
-              slideText.addClass("on");
+          if (business.offset().top <= yScroll + busiPadding) {
+            slideText.addClass("on");
 
-              calcVal = (yScroll - winH * 2) / business.offset().top;
-              if (!slideText.hasClass("fix")) {
-                slideText.find(".left").css({
-                  transform: `translateX(${calcVal * 10}%)`,
-                });
-                slideText.find(".right").css({
-                  transform: `translateX(${calcVal * -10}%)`,
-                });
-              }
-            } else {
-              slideText.removeClass("on");
+            calcVal = (yScroll - winH * 2) / business.offset().top;
+            if (!slideText.hasClass("fix")) {
+              slideText.find(".left").css({
+                transform: `translateX(${calcVal * 10}%)`,
+              });
+              slideText.find(".right").css({
+                transform: `translateX(${calcVal * -10}%)`,
+              });
             }
-          });
+          } else {
+            slideText.removeClass("on");
+          }
+        });
       });
     </script>
   </body>
