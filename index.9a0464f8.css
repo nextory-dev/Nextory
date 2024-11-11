@@ -838,7 +838,7 @@ body, body * {
 }
 
 .popup-list .popup-box {
-  max-width: 400px;
+  max-width: 450px;
   z-index: 1000;
   position: fixed;
   box-shadow: 0 15px 25px #0000004d, 0 5px 10px #0003;
@@ -871,6 +871,45 @@ body, body * {
 .popup-list .popup-box .bottom-bar .close-btn > span, .popup-list .popup-box .bottom-bar .checkbox {
   cursor: pointer;
   font-size: .9rem;
+}
+
+@media (max-width: 768px) {
+  .popup-list .popup-box {
+    max-width: 360px;
+    width: 80vw;
+    z-index: 1000;
+    position: fixed;
+    box-shadow: 0 15px 25px #0000004d, 0 5px 10px #0003;
+  }
+
+  .popup-list .popup-box[data-index="1"] {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .popup-list .popup-box .content img {
+    width: 100%;
+    height: auto;
+  }
+
+  .popup-list .popup-box .bottom-bar {
+    background-color: #ffffff80;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6px;
+    display: flex;
+  }
+
+  .popup-list .popup-box .bottom-bar .close-btn > i {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+
+  .popup-list .popup-box .bottom-bar .close-btn > span, .popup-list .popup-box .bottom-bar .checkbox {
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
 }
 
 /*# sourceMappingURL=index.9a0464f8.css.map */
