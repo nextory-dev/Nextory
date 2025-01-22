@@ -11,6 +11,13 @@
       transform: translate(-120%, -60%);
     }
 
+    &[data-index="2"] {
+      max-width: 500px;
+      top: 50%;
+      left: 50%;
+      transform: translate(16%, -48%);
+    }
+
     .content {
       img {
         width: 100%;
@@ -54,6 +61,12 @@
       z-index: 1000;
 
       &[data-index="1"] {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &[data-index="2"] {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
