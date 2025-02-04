@@ -18,7 +18,27 @@
       transform: translate(16%, -48%);
     }
 
+    &[data-index="3"] {
+      top: 50%;
+      left: 50%;
+      transform: translate(20%, -58.5%);
+
+      .link-btn {
+        cursor: pointer;
+        position: absolute;
+        top: 83.6%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 26%;
+        height: 5%;
+        border-radius: 5px;
+        display: block;
+      }
+    }
+
     .content {
+      position: relative;
+
       img {
         width: 100%;
         height: auto;
@@ -67,6 +87,12 @@
       }
 
       &[data-index="2"] {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &[data-index="3"] {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
