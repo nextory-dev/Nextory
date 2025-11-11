@@ -57,7 +57,7 @@
       .icon {
         width: 30px;
         position: relative;
-        padding: 100px 0;
+        padding: 105px 0;
 
         .circle {
           width: 30px;
@@ -97,6 +97,10 @@
         padding-left: 40px;
 
         &.color {
+          color: #fac001;
+        }
+
+        .color {
           color: #fac001;
         }
       }
