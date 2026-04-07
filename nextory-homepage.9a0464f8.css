@@ -875,6 +875,12 @@ body, body * {
   transform: translate(-50%);
 }
 
+.popup-list .popup-box[data-index="center"] {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .popup-list .popup-box .content {
   position: relative;
 }
