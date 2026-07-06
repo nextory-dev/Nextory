@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <script src="https://api-demo.botfenderai.kr:3021/1dba6f43-e141-4072-9d29-3a531d8bf1dc" defer></script>
+    <!-- partial:head-scripts:start -->
+    <!-- partial:head-scripts -->
+    <!-- partial:head-scripts:end -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>(주)네스토리</title>
@@ -42,124 +44,19 @@
 
     <!-- 외부 라이브러리 -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="/src/assets/lib/aos/aos.js"></script>
+    <script type="module" src="/src/js/aos-global.js"></script>
     <!-- 외부 라이브러리 -->
 
     <!-- 코어 라이브러리 -->
-    <script src="/src/js/common.js"></script>
-    <script src="/src/js/header.js"></script>
-    <script src="/src/js/footer.js"></script>
+    <script type="module" src="/src/js/common.js"></script>
+    <script type="module" src="/src/js/header.js"></script>
+    <script type="module" src="/src/js/footer.js"></script>
     <!-- 코어 라이브러리 -->
   </head>
   <body>
-    <div id="header">
-      <div id="header-inner" class="header-inner">
-        <div class="header-contents">
-          <div class="logo">
-            <a href="/index.html">
-              <img class="white-logo" src="/src/assets/img/icon/white-full-logo.png" alt="logo" />
-              <img class="color-logo" src="/src/assets/img/icon/color-full-logo.png" alt="logo" />
-            </a>
-          </div>
-          <nav class="nav d-none d-md-block">
-            <ul class="depth1">
-              <li class="menu-item">
-                <!-- li 에 이벤트 -->
-                <a href="/about/summary.html">회사소개</a>
-                <ul class="depth2">
-                  <li>
-                    <a href="/about/summary.html">회사개요</a>
-                  </li>
-                  <li>
-                    <a href="/about/history.html">연혁</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item">
-                <a href="/business/botfender.html">사업소개</a>
-                <ul class="depth2">
-                  <li>
-                    <a href="/business/botfender.html">botfenderAI V2.0</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item">
-                <a href="/recruitment/recruitment.html">인재채용</a>
-                <ul class="depth2">
-                  <li>
-                    <a href="/recruitment/recruitment.html">인재상</a>
-                  </li>
-                  <li>
-                    <a href="#" onclick="redirectRecruitment(event, 'benefits')">복리후생</a>
-                  </li>
-                  <li>
-                    <a href="#" onclick="redirectRecruitment(event, 'info')">채용정보</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item">
-                <a href="/contact/contact.html">Contact Us</a>
-              </li>
-            </ul>
-          </nav>
-          <div id="menu-btn" class="menu-btn">
-            <button>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div id="header-menu" class="header-menu">
-        <nav class="nav">
-          <ul class="depth1">
-            <li class="d-block d-md-flex">
-              <a href="/about/summary.html">회사소개</a>
-              <ul class="depth2 d-md-flex">
-                <li>
-                  <a href="/about/summary.html">회사개요</a>
-                </li>
-                <li>
-                  <a href="/about/history.html">연혁</a>
-                </li>
-              </ul>
-            </li>
-            <li class="d-block d-md-flex">
-              <a href="/business/botfender.html">사업소개</a>
-              <ul class="depth2 d-md-flex">
-                <li>
-                  <a href="/business/botfender.html">botfenderAI V2.0</a>
-                </li>
-              </ul>
-            </li>
-            <li class="d-block d-md-flex">
-              <a href="/recruitment/recruitment.html">인재채용</a>
-              <ul class="depth2 d-md-flex">
-                <li>
-                  <a href="/recruitment/recruitment.html">인재상</a>
-                </li>
-                <li>
-                  <a href="#" onclick="redirectRecruitment(event, 'benefits')">복리후생</a>
-                </li>
-                <li>
-                  <a href="#" onclick="redirectRecruitment(event, 'info')">채용정보</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="/contact/contact.html">Contact Us</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+    <!-- partial:header:start -->
+    <!-- partial:header -->
+    <!-- partial:header:end -->
     <div id="main">
       <div class="main-inner layout-inner">
         <div class="page-title mb-4 container">
@@ -362,57 +259,9 @@
         </div>
       </div>
     </div>
-    <div id="footer">
-      <div class="footer-inner d-flex flex-column-reverse d-md-flex flex-md-row">
-        <div class="footer-left col-12 col-md-6">
-          <div class="footer-logo">
-            <img src="/src/assets/img/icon/white-full-logo.png" alt="logo" />
-          </div>
-          <div class="footer-info">
-            <ul class="footer-link">
-              <li><a href="/about/summary.html">회사소개</a></li>
-              <li><a href="/business/botfender.html">사업소개</a></li>
-              <li><a href="/recruitment/recruitment.html">인재채용</a></li>
-              <li><a href="/contact/contact.html">Contact Us</a></li>
-            </ul>
-            <div class="footer-info-item">
-              <span class="sub">(07332) 서울 영등포구 여의도동 의사당대로1길 11 <br class="d-block d-md-none" />대우매종리브르 1112호</span>
-              <br />
-              <span class="title">전화번호.</span>
-              <span class="sub">02-6953-4490</span>
-              <span class="title ms-4">팩스.</span>
-              <span class="sub">02-786-4490</span>
-            </div>
-            <div class="footer-copyright">
-              <span>Copyright© NEXTORY Co.,Ltd. 2024 All Rights Reserved.</span>
-            </div>
-          </div>
-        </div>
-        <div class="footer-right col-12 col-md-6">
-          <div class="copyright">
-            <div>for the next story</div>
-            <div>혁신적인 기술과 고객 중심의 서비스 기업<br />(주)네스토리</div>
-          </div>
-          <div class="pdf-container">
-            <button>
-              <a id="download-link" href="">
-                <span>회사소개서</span>
-                <img src="/src/assets/img/icon/download.png" alt="image" />
-              </a>
-            </button>
-            <button>
-              <a href="/src/files/brochure.pdf" download="BotfenderAI_브로슈어">
-                <span>botfenderAI V2.0 브로슈어</span>
-                <img src="/src/assets/img/icon/download.png" alt="image" />
-              </a>
-            </button>
-          </div>
-        </div>
-        <div id="footer-navigation" class="footer-navigation">
-          <button>PAGETOP</button>
-        </div>
-      </div>
-    </div>
+    <!-- partial:footer:start -->
+    <!-- partial:footer -->
+    <!-- partial:footer:end -->
 
     <script>
       // URL에서 파라미터 값을 가져오는 함수

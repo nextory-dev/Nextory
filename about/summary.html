@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <script src="https://api-demo.botfenderai.kr:3021/1dba6f43-e141-4072-9d29-3a531d8bf1dc" defer></script>
+    <!-- partial:head-scripts:start -->
+    <!-- partial:head-scripts -->
+    <!-- partial:head-scripts:end -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>(주)네스토리</title>
@@ -42,124 +44,20 @@
 
     <!-- 외부 라이브러리 -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="/src/assets/lib/aos/aos.js"></script>
+    <script type="module" src="/src/js/aos-global.js"></script>
     <!-- 외부 라이브러리 -->
 
     <!-- 코어 라이브러리 -->
-    <script src="/src/js/common.js"></script>
-    <script src="/src/js/header.js"></script>
-    <script src="/src/js/footer.js"></script>
+    <script type="module" src="/src/js/common.js"></script>
+    <script type="module" src="/src/js/header.js"></script>
+    <script type="module" src="/src/js/footer.js"></script>
+    <script type="module" src="/src/js/summary.js"></script>
     <!-- 코어 라이브러리 -->
   </head>
   <body>
-    <div id="header">
-      <div id="header-inner" class="header-inner">
-        <div class="header-contents">
-          <div class="logo">
-            <a href="/index.html">
-              <img class="white-logo" src="/src/assets/img/icon/white-full-logo.png" alt="logo" />
-              <img class="color-logo" src="/src/assets/img/icon/color-full-logo.png" alt="logo" />
-            </a>
-          </div>
-          <nav class="nav d-none d-md-block">
-            <ul class="depth1">
-              <li class="menu-item">
-                <!-- li 에 이벤트 -->
-                <a href="/about/summary.html">회사소개</a>
-                <ul class="depth2">
-                  <li>
-                    <a href="/about/summary.html">회사개요</a>
-                  </li>
-                  <li>
-                    <a href="/about/history.html">연혁</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item">
-                <a href="/business/botfender.html">사업소개</a>
-                <ul class="depth2">
-                  <li>
-                    <a href="/business/botfender.html">botfenderAI V2.0</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item">
-                <a href="/recruitment/recruitment.html">인재채용</a>
-                <ul class="depth2">
-                  <li>
-                    <a href="/recruitment/recruitment.html">인재상</a>
-                  </li>
-                  <li>
-                    <a href="#" onclick="redirectRecruitment(event, 'benefits')">복리후생</a>
-                  </li>
-                  <li>
-                    <a href="#" onclick="redirectRecruitment(event, 'info')">채용정보</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item">
-                <a href="/contact/contact.html">Contact Us</a>
-              </li>
-            </ul>
-          </nav>
-          <div id="menu-btn" class="menu-btn">
-            <button>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div id="header-menu" class="header-menu">
-        <nav class="nav">
-          <ul class="depth1">
-            <li class="d-block d-md-flex">
-              <a href="/about/summary.html">회사소개</a>
-              <ul class="depth2 d-md-flex">
-                <li>
-                  <a href="/about/summary.html">회사개요</a>
-                </li>
-                <li>
-                  <a href="/about/history.html">연혁</a>
-                </li>
-              </ul>
-            </li>
-            <li class="d-block d-md-flex">
-              <a href="/business/botfender.html">사업소개</a>
-              <ul class="depth2 d-md-flex">
-                <li>
-                  <a href="/business/botfender.html">botfenderAI V2.0</a>
-                </li>
-              </ul>
-            </li>
-            <li class="d-block d-md-flex">
-              <a href="/recruitment/recruitment.html">인재채용</a>
-              <ul class="depth2 d-md-flex">
-                <li>
-                  <a href="/recruitment/recruitment.html">인재상</a>
-                </li>
-                <li>
-                  <a href="#" onclick="redirectRecruitment(event, 'benefits')">복리후생</a>
-                </li>
-                <li>
-                  <a href="#" onclick="redirectRecruitment(event, 'info')">채용정보</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="/contact/contact.html">Contact Us</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+    <!-- partial:header:start -->
+    <!-- partial:header -->
+    <!-- partial:header:end -->
     <div id="main">
       <div class="main-inner layout-inner">
         <div class="page-title mb-4 container">
@@ -184,180 +82,132 @@
           </ul>
         </div>
         <div class="contents container">
-          <section class="section-1">
-            <ul class="card-list">
-              <li class="d-flex flex-column-reverse row-gap-5 flex-md-row row-gap-md-0">
-                <div class="text-box col-12 col-md-7">
-                  <div class="title" data-aos="fade-right" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
-                    for the next story…<br />
-                    새로운 이야기의 시작을 함께
-                  </div>
-                  <div class="desc" data-aos="fade-right" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
-                    ㈜네스토리는 이제 새롭게 펼쳐질 아름다운 이야기로<br />
-                    여러분들을 찾아갑니다.
-                  </div>
-                </div>
-                <div class="img-box col-12 col-md-5">
-                  <div class="img-cont">
-                    <div class="img">
-                      <img src="/src/assets/img/summary/summary-01.png" alt="image" data-aos="zoom-out" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom" />
-                    </div>
-                    <div class="icon">
-                      <img src="/src/assets/img/summary/icon/summary-01.png" alt="image" />
-                    </div>
-                  </div>
-                  <div class="no">
-                    <span data-aos="fade-in" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">01</span>
-                  </div>
-                  <div class="desc">
-                    <span data-aos="fade-in" data-aos-offset="50" data-aos-delay="200" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">고객 중심의 항상 새로운 이야기를 써 나갑니다.</span>
-                  </div>
-                </div>
-              </li>
-              <li class="d-flex flex-column row-gap-5 flex-md-row row-gap-md-0">
-                <div class="img-box col-12 col-md-5">
-                  <div class="img-cont">
-                    <div class="img">
-                      <img src="/src/assets/img/summary/summary-02.png" alt="image" data-aos="zoom-out" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom" />
-                    </div>
-                    <div class="icon">
-                      <img src="/src/assets/img/summary/icon/summary-02.png" alt="image" />
-                    </div>
-                  </div>
-                  <div class="no">
-                    <span data-aos="fade-in" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">02</span>
-                  </div>
-                  <div class="desc">
-                    <span data-aos="fade-in" data-aos-offset="50" data-aos-delay="200" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">분야별 전문가 그룹의 기술과 경험을 공유합니다.</span>
-                  </div>
-                </div>
-                <div class="text-box col-12 col-md-7 text-md-end">
-                  <div class="title" data-aos="fade-left" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
-                    인공지능(AI/ML) 세상을 열어가는<br />
-                    IT 서비스 전문가 그룹
-                  </div>
-                  <div class="desc" data-aos="fade-left" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
-                    전문성을 갖춘 인재들이 협력하여 최신 기술 트렌드를 선도하고,<br />
-                    최고의 결과를 만들어내며 팀워크와 지식 공유를 통해 함께 성장해 나갑니다.
-                  </div>
-                </div>
-              </li>
-              <li class="d-flex flex-column-reverse row-gap-5 flex-md-row row-gap-md-0">
-                <div class="text-box col-12 col-md-7">
-                  <div class="title" data-aos="fade-right" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
-                    사람과 사람, 사람과 세상을 자유롭게<br />
-                    세상 모든 것과의 커뮤니케이션
-                  </div>
-                  <div class="desc" data-aos="fade-right" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
-                    고객의 요구와 기대를 최우선으로 사용자 경험을 극대화하고,<br />
-                    지속 가능한 성장 모델 구축으로 장기적인 비즈니스 성공을 도모합니다.
-                  </div>
-                </div>
-                <div class="img-box col-12 col-md-5">
-                  <div class="img-cont">
-                    <div class="img">
-                      <img src="/src/assets/img/summary/summary-03.png" alt="image" data-aos="zoom-out" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom" />
-                    </div>
-                    <div class="icon">
-                      <img src="/src/assets/img/summary/icon/summary-03.png" alt="image" />
-                    </div>
-                  </div>
-                  <div class="no">
-                    <span data-aos="fade-in" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">03</span>
-                  </div>
-                  <div class="desc">
-                    <span data-aos="fade-in" data-aos-offset="50" data-aos-delay="200" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">세상과 자유로운 의사소통을 실현합니다.</span>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </section>
-          <!-- <section class="section-2">
-            <div class="title">기업현황</div>
-            <div class="d-flex gap-5">
-              <div class="d-flex flex-column justify-content-center align-items-center col card">
-                <span>아이콘</span>
-                <span>회사설립</span>
-                <span><span>2024</span><span>년</span></span>
-              </div>
-              <div class="d-flex flex-column justify-content-center align-items-center col card">
-                <span>아이콘</span>
-                <span>회사설립</span>
-                <span><span>2024</span><span>억</span></span>
-              </div>
-              <div class="d-flex flex-column justify-content-center align-items-center col card">
-                <span>아이콘</span>
-                <span>회사설립</span>
-                <span><span>2024</span><span>명</span></span>
-              </div>
+          <section class="ai-security-company-section">
+            <div class="company-overview" data-aos="fade-right" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+              <span>Overview</span>
+              <h2><span class="overview-title-line">AI-Native로 보안의 <span class="overview-moving-underline">새로운 기준</span>을 만드는 기업,</span><br />주식회사 네스토리</h2>
+              <p class="overview-no-wrap">네스토리는 AI 기술을 기반으로 사이버 보안의 탐지, 분석, 대응, 관리 전 영역을 혁신하는 AI-Native Security 전문기업입니다.</p>
             </div>
-          </section> -->
+            <ol class="company-story-list">
+              <li class="company-story-item" data-aos="fade-right" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+                <div class="story-copy">
+                  <span class="story-kicker">Security Shift</span>
+                  <h3 class="story-title-nowrap">새로운 기술 환경은 <span class="story-moving-underline">새로운 공격 방식</span>을 만들고 있습니다.</h3>
+                  <p>디지털 전환과 AI 기술의 확산으로 기업의 IT 환경은 빠르게 변화하고 있습니다. AI Agent, LLM, API 중심 서비스, 클라우드, 자동화 프로그램이 늘어나는 만큼 공격 방식도 더욱 지능화되고 있습니다.</p>
+                  <p class="story-no-wrap">기존의 룰 기반 보안 체계만으로는 이러한 위협에 효과적으로 대응하기 어렵습니다.</p>
+                </div>
+              </li>
+              <li class="company-story-item align-right" data-aos="fade-left" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+                <div class="story-copy">
+                  <span class="story-kicker">AI-Native Intelligence</span>
+                  <h3 class="story-title-nowrap">네스토리는 <span class="story-moving-underline">보안 이벤트의 관계</span>를 실시간으로 분석합니다.</h3>
+                  <p>AI 기반 행위 분석(Behavior Intelligence)과 관계 인텔리전스(Relationship Intelligence) 기술로<br />사용자, 디바이스, 세션, API, 애플리케이션 등 다양한 보안 이벤트 간의 관계를 연결합니다.</p>
+                  <p class="story-no-wrap">이를 통해 공격의 의도를 이해하고 능동적으로 대응하는 차세대 AI-Native 보안 플랫폼을 제공합니다.</p>
+                </div>
+              </li>
+              <li class="company-story-item" data-aos="fade-right" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+                <div class="story-copy">
+                  <span class="story-kicker">Platform Vision</span>
+                  <h3 class="story-title-nowrap">AI가 보안 운영을 판단하고 대응하는 <span class="story-moving-underline">플랫폼 기업</span>을 지향합니다.</h3>
+                  <p>네스토리는 단순한 보안 제품을 만드는 기업이 아니라, AI가 보안 운영을 스스로 분석하고 판단하며 대응하는 AI-Native Security Platform 기업을 목표로 기술을 혁신하고 있습니다.</p>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <section class="business-fields-section">
+            <div class="title" data-aos="fade-up" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom"><span class="title-underline">핵심 사업 분야</span></div>
+            <div class="business-fields-grid" data-aos="fade-up" data-aos-offset="50" data-aos-delay="150" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+              <article class="business-field-card">
+                <h3>AI-Native Security Intelligence</h3>
+                <ul>
+                  <li>AI 기반 이상행위 탐지</li>
+                  <li>관계 기반(Relationship Intelligence) 위협 분석</li>
+                  <li>공격 시나리오 분석</li>
+                  <li>보안 이벤트 상관관계 분석</li>
+                  <li>AI 기반 보안 운영 자동화</li>
+                </ul>
+              </article>
+              <article class="business-field-card">
+                <h3>Web & API Security</h3>
+                <ul>
+                  <li>악성 봇 및 매크로 차단</li>
+                  <li>API 보안</li>
+                  <li>데이터 스크래핑 방지</li>
+                  <li>AI Agent 및 LLM 크롤러 대응</li>
+                  <li>웹 서비스 보호</li>
+                </ul>
+              </article>
+              <article class="business-field-card">
+                <h3>Vulnerability Management</h3>
+                <ul>
+                  <li>보안 취약점 통합 관리</li>
+                  <li>IT 자산 위험도 관리</li>
+                  <li>취약점 분석 및 우선순위 관리</li>
+                  <li>컴플라이언스 지원</li>
+                </ul>
+              </article>
+              <article class="business-field-card">
+                <h3>Security Assessment</h3>
+                <ul>
+                  <li>웹·모바일 애플리케이션 모의해킹 취약점 진단 및 관리</li>
+                  <li>개선 이력 관리</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="section-2 competitiveness-section">
+            <div class="title" data-aos="fade-up" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">네스토리의 <span class="title-underline">경쟁력</span></div>
+            <div class="competitiveness-slider" data-competitiveness-slider data-aos="fade-up" data-aos-offset="50" data-aos-delay="150" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+              <article class="competitiveness-card is-active" data-competitiveness-card>
+                <span>01</span>
+                <strong>AI 기반 보안 플랫폼</strong>
+                <p>탐지, 분석, 대응, 관리 전 과정을 하나의 플랫폼으로 통합해 보안 운영 흐름을 연결합니다.</p>
+              </article>
+              <article class="competitiveness-card is-right-top" data-competitiveness-card>
+                <span>02</span>
+                <strong>관계 기반 위협 분석</strong>
+                <p>관계 지능 기반의 차별화된 AI 분석 기술로 복합 공격과 신종 위협까지 효과적으로 탐지합니다.</p>
+              </article>
+              <article class="competitiveness-card is-right-bottom" data-competitiveness-card>
+                <span>03</span>
+                <strong>통합 보안 역량</strong>
+                <p>웹, API, AI 서비스 환경을 아우르는 통합 보안 역량으로 변화하는 공격 표면에 대응합니다.</p>
+              </article>
+              <article class="competitiveness-card is-left-bottom" data-competitiveness-card>
+                <span>04</span>
+                <strong>AI 자동화</strong>
+                <p>AI 기반 자동화 기술로 보안 운영의 효율성과 정확성을 높이고 반복 대응 부담을 줄입니다.</p>
+              </article>
+              <article class="competitiveness-card is-left-top" data-competitiveness-card>
+                <span>05</span>
+                <strong>종합 사이버보안 포트폴리오</strong>
+                <p>취약점 관리, 모의해킹, 웹·API 보호, AI 기반 이상행위 분석까지 종합 포트폴리오를 구축했습니다.</p>
+              </article>
+            </div>
+          </section>
+
           <section class="section-3">
             <div class="title" data-aos="fade-up" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">VISION</div>
-            <div class="d-flex flex-column flex-md-row">
-              <div class="left-box col-12 col-md-4" data-aos="fade-in" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
-                <img src="/src/assets/img/summary/vision-back.png" alt="image" />
-                <div class="text">
-                  <span>for the next story</span>
-                  <span>
-                    혁신적인 기술 개발과<br />
-                    고객 중심의 서비스로<br />
-                    새로운 이야기를 써 나가겠습니다.
-                  </span>
-                </div>
+            <div class="vision-panel" data-aos="fade-up" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+              <div class="vision-copy">
+                <p class="eyebrow">우리의 비전</p>
+                <h2>AI가 보안을 이해하고, AI가 보안을 운영하는 시대를 만듭니다.</h2>
+                <p class="lead">네스토리는 AI 시대의 새로운 보안 패러다임을 제시합니다.</p>
+                <p>
+                  단일 보안 제품을 공급하는 기업을 넘어, AI-Native Security Intelligence, Web & API Security,
+                  Vulnerability Management, Security Assessment를 하나의 생태계로 연결하는
+                  AI-Native Security Platform 기업으로 성장하고 있습니다.
+                </p>
+                <p>
+                  지속적인 연구개발과 혁신으로 기업의 디지털 자산을 안전하게 보호하고,
+                  대한민국을 넘어 글로벌 시장을 선도하는 AI 보안 전문기업으로 나아가겠습니다.
+                </p>
               </div>
-              <ul class="vision-list col-12 offset-0 col-md-8 offset-md-1">
-                <li class="vision-item" data-aos="fade-up" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
-                  <div class="icon">
-                    <img src="/src/assets/img/summary/icon/summary-04.png" alt="icon" />
-                  </div>
-                  <ul class="desc">
-                    <li>혁신적인 기술 개발</li>
-                    <li>- 최신 기술 트렌드를 선도하며, 최고의 솔루션 제공</li>
-                    <li>- AI, ML, Big-data 등 첨단 기술을 적극 활용하여 혁신적인 제품 개발</li>
-                  </ul>
-                </li>
-                <li class="vision-item" data-aos="fade-up" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
-                  <div class="icon">
-                    <img src="/src/assets/img/summary/icon/summary-05.png" alt="icon" />
-                  </div>
-                  <ul class="desc">
-                    <li>고객 중심 서비스</li>
-                    <li>- 고객의 요구와 기대를 최우선으로 사용자 경험 극대화</li>
-                    <li>- 고객의 피드백을 반영하여 지속적인 서비스 품질 개선</li>
-                  </ul>
-                </li>
-                <li class="vision-item" data-aos="fade-up" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
-                  <div class="icon">
-                    <img src="/src/assets/img/summary/icon/summary-06.png" alt="icon" />
-                  </div>
-                  <ul class="desc">
-                    <li>지속 가능한 성장</li>
-                    <li>- 사회적 책임을 다하며, 환경 친화적인 경영 실천</li>
-                    <li>- 지속 가능한 성장 모델 구축으로 장기적인 비즈니스 성공 도모</li>
-                  </ul>
-                </li>
-                <li class="vision-item" data-aos="fade-up" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
-                  <div class="icon">
-                    <img src="/src/assets/img/summary/icon/summary-07.png" alt="icon" />
-                  </div>
-                  <ul class="desc">
-                    <li>글로벌 시장 진출</li>
-                    <li>- 글로벌 시장을 겨냥한 제품과 서비스 개발</li>
-                    <li>- 다양한 문화와 시장의 특성을 반영한 현지화 전략을 통한 경쟁력 강화</li>
-                  </ul>
-                </li>
-                <li class="vision-item" data-aos="fade-up" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
-                  <div class="icon">
-                    <img src="/src/assets/img/summary/icon/summary-08.png" alt="icon" />
-                  </div>
-                  <ul class="desc">
-                    <li>인재 육성 및 조직 문화</li>
-                    <li>- 직원들의 성장과 발전 지원 및 창의적이고 도전적인 조직 문화 조성</li>
-                    <li>- 전문성 기반의 팀워크 강화 및 지식과 경험 공유로 회사 발전 도모</li>
-                  </ul>
-                </li>
-              </ul>
+              <div class="vision-backdrop" aria-hidden="true">
+                <img src="/src/assets/img/summary/vision-back.png" alt="" />
+              </div>
             </div>
           </section>
           <section class="section-4">
@@ -412,56 +262,9 @@
         </div>
       </div>
     </div>
-    <div id="footer">
-      <div class="footer-inner d-flex flex-column-reverse d-md-flex flex-md-row">
-        <div class="footer-left col-12 col-md-6">
-          <div class="footer-logo">
-            <img src="/src/assets/img/icon/white-full-logo.png" alt="logo" />
-          </div>
-          <div class="footer-info">
-            <ul class="footer-link">
-              <li><a href="/about/summary.html">회사소개</a></li>
-              <li><a href="/business/botfender.html">사업소개</a></li>
-              <li><a href="/recruitment/recruitment.html">인재채용</a></li>
-              <li><a href="/contact/contact.html">Contact Us</a></li>
-            </ul>
-            <div class="footer-info-item">
-              <span class="sub">(07332) 서울 영등포구 여의도동 의사당대로1길 11 <br class="d-block d-md-none" />대우매종리브르 1112호</span>
-              <br />
-              <span class="title">전화번호.</span>
-              <span class="sub">02-6953-4490</span>
-              <span class="title ms-4">팩스.</span>
-              <span class="sub">02-786-4490</span>
-            </div>
-            <div class="footer-copyright">
-              <span>Copyright© NEXTORY Co.,Ltd. 2024 All Rights Reserved.</span>
-            </div>
-          </div>
-        </div>
-        <div class="footer-right col-12 col-md-6">
-          <div class="copyright">
-            <div>for the next story</div>
-            <div>혁신적인 기술과 고객 중심의 서비스 기업<br />(주)네스토리</div>
-          </div>
-          <div class="pdf-container">
-            <button>
-              <a id="download-link" href="">
-                <span>회사소개서</span>
-                <img src="/src/assets/img/icon/download.png" alt="image" />
-              </a>
-            </button>
-            <button>
-              <a href="/src/files/brochure.pdf" download="BotfenderAI_브로슈어">
-                <span>botfenderAI V2.0 브로슈어</span>
-                <img src="/src/assets/img/icon/download.png" alt="image" />
-              </a>
-            </button>
-          </div>
-        </div>
-        <div id="footer-navigation" class="footer-navigation">
-          <button>PAGETOP</button>
-        </div>
-      </div>
-    </div>
+    <!-- partial:footer:start -->
+    <!-- partial:footer -->
+    <!-- partial:footer:end -->
+
   </body>
 </html>

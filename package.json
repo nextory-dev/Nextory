@@ -1,11 +1,14 @@
 {
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir dist",
+    "dev": "node scripts/inject-partials.mjs && vite",
+    "dev:nat": "node scripts/inject-partials.mjs && vite --host 0.0.0.0",
+    "start": "npm run dev",
+    "build": "node scripts/inject-partials.mjs && vite build",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.16.1",
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "sass": "^1.89.2",
+    "vite": "^7.0.0"
   }
 }

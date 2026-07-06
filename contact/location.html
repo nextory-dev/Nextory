@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- partial:head-scripts:start -->
+    <!-- partial:head-scripts -->
+    <!-- partial:head-scripts:end -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(주)네스토리</title>
+
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="For The Next Story" />
+    <!-- 기본 파비콘 (favicon.ico) -->
+    <link rel="icon" href="/src/assets/img/icon/favicon.ico" type="image/x-icon" />
+    <!-- PNG 파비콘 -->
+    <link rel="icon" href="/src/assets/img/icon/favicon.png" type="image/png" sizes="32x32" />
+    <!-- Apple Touch Icon (iOS 홈 화면에 추가 시 아이콘) -->
+    <link rel="apple-touch-icon" href="/src/assets/img/icon/favicon.png" />
+    <!-- Android 및 Windows 타일 (144x144px 이상 권장) -->
+    <meta name="msapplication-TileImage" content="/src/assets/img/icon/favicon.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <!-- 타일 배경 색 -->
+    <!-- iPhone X 이상에서 배경 색상 설정 -->
+    <meta name="theme-color" content="#ffffff" />
+
+    <meta property="og:title" content="Nextory" />
+    <meta property="og:description" content="For The Next Story" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.nextory.co.kr" />
+    <meta property="og:image" content="/src/assets/img/icon/thumbnail.jpeg" />
+
+    <meta name="naver-site-verification" content="d94ee5db97f816a7b86800adce21a2ece30b3a31" />
+
+    <!-- 외부 스타일 -->
+    <link rel="stylesheet" href="/src/assets/lib/fontawesome-free-6.6.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="/src/assets/lib/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/src/assets/lib/aos/aos.css" />
+    <!-- 외부 스타일 -->
+
+    <!-- 코어 스타일 -->
+    <link rel="stylesheet" href="/src/scss/common.scss" />
+    <link rel="stylesheet" href="/src/scss/contact.scss" />
+    <!-- 코어 스타일 -->
+
+    <!-- 외부 라이브러리 -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="module" src="/src/js/aos-global.js"></script>
+    <!-- 외부 라이브러리 -->
+
+    <!-- 코어 라이브러리 -->
+    <script type="module" src="/src/js/common.js"></script>
+    <script type="module" src="/src/js/header.js"></script>
+    <script type="module" src="/src/js/footer.js"></script>
+    <!-- 코어 라이브러리 -->
+  </head>
+  <body>
+    <!-- partial:header:start -->
+    <!-- partial:header -->
+    <!-- partial:header:end -->
+    <div id="main">
+      <div class="main-inner layout-inner">
+        <div class="page-title mb-4 container">
+          <div class="title">
+            <span class="d-flex overflow-hidden">
+              <em data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">Contact</em>
+              <em class="ms-2" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">Us</em>
+            </span>
+          </div>
+          <ul class="bread-crumbs">
+            <li>
+              <i class="fas fa-home"></i>
+            </li>
+            <li>
+              <i class="fas fa-angle-right"></i>
+            </li>
+            <li><span>Contact Us</span></li>
+            <li>
+              <i class="fas fa-angle-right"></i>
+            </li>
+            <li><span>오시는 길</span></li>
+          </ul>
+        </div>
+        <div class="contents container">
+          <section class="section-1">
+            <div class="title" data-aos="fade-up" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">오시는 길</div>
+            <div class="map-container">
+              <div id="map" class="map" data-aos="zoom-out" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom"></div>
+              <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a1cc041ff5b2815990e83abf8548f336&libraries=services"></script>
+              <script>
+                let container = document.getElementById("map");
+                let officeAddress = "서울 영등포구 국회대로 632";
+                let options = {
+                  center: new kakao.maps.LatLng(37.520756, 126.913622),
+                  level: 3,
+                };
+
+                let map = new kakao.maps.Map(container, options);
+                let geocoder = new kakao.maps.services.Geocoder();
+
+                geocoder.addressSearch(officeAddress, function (result, status) {
+                  if (status !== kakao.maps.services.Status.OK) return;
+
+                  let markerPosition = new kakao.maps.LatLng(result[0].y, result[0].x);
+                  let marker = new kakao.maps.CustomOverlay({
+                    position: markerPosition,
+                    content: '<div style="padding:8px 14px;border:1px solid #222;border-radius:4px;background:#fff;color:#111;font-size:14px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.18);white-space:nowrap;">(주)네스토리</div>',
+                    yAnchor: 1.35,
+                  });
+
+                  marker.setMap(map);
+                  map.setCenter(markerPosition);
+                });
+              </script>
+            </div>
+            <ul class="box-list d-flex justify-content-between mt-5 flex-column flex-md-row" data-aos="fade-in" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+              <li class="p-2 d-flex align-items-center">
+                <div class="img-cont">
+                  <img src="/src/assets/img/contact/icon/gps.png" alt="image" />
+                </div>
+                <div class="info-cont d-flex flex-column">
+                  <p>주소</p>
+                  <div>서울 영등포구 국회대로 632</div>
+                  <div>1306호(영등포동 7가, 케이엘케이유윈시티)</div>
+                </div>
+              </li>
+              <li class="p-2 d-flex align-items-center">
+                <div class="img-cont">
+                  <img src="/src/assets/img/contact/icon/telephone.png" alt="image" />
+                </div>
+                <div class="info-cont d-flex flex-column">
+                  <p>연락처</p>
+                  <div>T. 02-6953-4490</div>
+                  <div>F. 02-786-4490</div>
+                </div>
+              </li>
+              <li class="p-2 d-flex align-items-center">
+                <div class="img-cont">
+                  <img src="/src/assets/img/contact/icon/train.png" alt="image" />
+                </div>
+                <div class="info-cont d-flex flex-column">
+                  <p>지하철 이용 시</p>
+                  <div class="d-flex align-items-center">
+                    <div class="train train-5 me-2">5</div>
+                    <span>영등포시장역 1번 출구 도보 5분 거리</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- partial:footer:start -->
+    <!-- partial:footer -->
+    <!-- partial:footer:end -->
+
+  </body>
+</html>

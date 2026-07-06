@@ -16,12 +16,9 @@ $(document).ready(function () {
           if ($(".dummy").length) {
             setTimeout(() => {
               dummyRemove();
-              // if (pos > 0) {
-              //   $("html,body").css({
-              //     overflow: "visible",
-              //   });
-              // }
-              scrollFlag = true;
+              $("body").css({
+                overflow: "",
+              });
             }, 400);
           }
         }

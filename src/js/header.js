@@ -6,7 +6,7 @@ $(document).ready(function () {
   let allMenuFlag = false;
 
   $headerInner
-    .find(".menu-item")
+    .find(".menu-item.has-submenu")
     .off()
     .on("mouseenter mouseleave", function (e) {
       let type = e.type;
@@ -57,7 +57,7 @@ $(document).ready(function () {
   }
 });
 
-function redirectRecruitment(event, t) {
+window.redirectRecruitment = function redirectRecruitment(event, t) {
   event.preventDefault();
   window.location.href = `/recruitment/recruitment.html?t=${t}`;
-}
+};

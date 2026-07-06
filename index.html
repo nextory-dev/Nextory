@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <script src="https://api-demo.botfenderai.kr:3021/1dba6f43-e141-4072-9d29-3a531d8bf1dc" defer></script>
+    <!-- partial:head-scripts:start -->
+    <!-- partial:head-scripts -->
+    <!-- partial:head-scripts:end -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>(주)네스토리</title>
@@ -45,124 +47,19 @@
     <!-- 외부 라이브러리 -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="/src/assets/lib/aos/aos.js"></script>
+    <script type="module" src="/src/js/aos-global.js"></script>
     <!-- 외부 라이브러리 -->
 
     <!-- 코어 라이브러리 -->
-    <script src="/src/js/common.js"></script>
-    <script src="/src/js/header.js"></script>
-    <script src="/src/js/footer.js"></script>
+    <script type="module" src="/src/js/common.js"></script>
+    <script type="module" src="/src/js/header.js"></script>
+    <script type="module" src="/src/js/footer.js"></script>
     <!-- 코어 라이브러리 -->
   </head>
   <body>
-    <div id="header">
-      <div id="header-inner" class="header-inner">
-        <div class="header-contents">
-          <div class="logo">
-            <a href="/index.html">
-              <img class="white-logo" src="/src/assets/img/icon/white-full-logo.png" alt="logo" />
-              <img class="color-logo" src="/src/assets/img/icon/color-full-logo.png" alt="logo" />
-            </a>
-          </div>
-          <nav class="nav d-none d-md-block">
-            <ul class="depth1">
-              <li class="menu-item">
-                <!-- li 에 이벤트 -->
-                <a href="/about/summary.html">회사소개</a>
-                <ul class="depth2">
-                  <li>
-                    <a href="/about/summary.html">회사개요</a>
-                  </li>
-                  <li>
-                    <a href="/about/history.html">연혁</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item">
-                <a href="/business/botfender.html">사업소개</a>
-                <ul class="depth2">
-                  <li>
-                    <a href="/business/botfender.html">botfenderAI V2.0</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item">
-                <a href="/recruitment/recruitment.html">인재채용</a>
-                <ul class="depth2">
-                  <li>
-                    <a href="/recruitment/recruitment.html">인재상</a>
-                  </li>
-                  <li>
-                    <a href="#" onclick="redirectRecruitment(event, 'benefits')">복리후생</a>
-                  </li>
-                  <li>
-                    <a href="#" onclick="redirectRecruitment(event, 'info')">채용정보</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item">
-                <a href="/contact/contact.html">Contact Us</a>
-              </li>
-            </ul>
-          </nav>
-          <div id="menu-btn" class="menu-btn">
-            <button>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div id="header-menu" class="header-menu">
-        <nav class="nav">
-          <ul class="depth1">
-            <li class="d-block d-md-flex">
-              <a href="/about/summary.html">회사소개</a>
-              <ul class="depth2 d-md-flex">
-                <li>
-                  <a href="/about/summary.html">회사개요</a>
-                </li>
-                <li>
-                  <a href="/about/history.html">연혁</a>
-                </li>
-              </ul>
-            </li>
-            <li class="d-block d-md-flex">
-              <a href="/business/botfender.html">사업소개</a>
-              <ul class="depth2 d-md-flex">
-                <li>
-                  <a href="/business/botfender.html">botfenderAI V2.0</a>
-                </li>
-              </ul>
-            </li>
-            <li class="d-block d-md-flex">
-              <a href="/recruitment/recruitment.html">인재채용</a>
-              <ul class="depth2 d-md-flex">
-                <li>
-                  <a href="/recruitment/recruitment.html">인재상</a>
-                </li>
-                <li>
-                  <a href="#" onclick="redirectRecruitment(event, 'benefits')">복리후생</a>
-                </li>
-                <li>
-                  <a href="#" onclick="redirectRecruitment(event, 'info')">채용정보</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="/contact/contact.html">Contact Us</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+    <!-- partial:header:start -->
+    <!-- partial:header -->
+    <!-- partial:header:end -->
     <div id="main">
       <div class="main-inner">
         <div class="contents">
@@ -244,107 +141,135 @@
             </div>
 
             <div class="business-content container flex-column-reverse row-gap-5 flex-md-row row-gap-md-0">
-              <div class="col-12 col-md-7">
-                <div class="no" data-aos="fade-right" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">BUSINESS 01</div>
-                <div class="title" data-aos="fade-right" data-aos-offset="50" data-aos-delay="200" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">지능형 자동화 위협(악성 봇) <br />실시간 탐지·방어</div>
-                <div class="desc" data-aos="fade-right" data-aos-offset="50" data-aos-delay="300" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
-                  AI 기반 사용자 행위분석 기술을 적용하여, <br />비정상 접근, 자동화 행위 탐지 및 실시간 차단이 가능한 <br />경량형 보안 솔루션입니다.
-                  <!-- BotfenderAI(봇펜더AI)는 악성 봇 & 불법 매크로에 대해 <br />
-                  인공지능(AI/ML)기반의 실시간(Real-time) 탐지를 제공하고 <br />
-                  다양한 위협의 신속한 차단 및 방어를 지원합니다. -->
+              <div class="col-12 col-md-4 solution-copy" data-aos="fade-right" data-aos-offset="50" data-aos-delay="100" data-aos-duration="600" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+                <div class="no">SOLUTION 01</div>
+                <div class="title">AnomixAI</div>
+                <div class="desc">
+                  AI-Native 실시간 행위 맥락 인지형 <br />보안 위협 인텔리전스 플랫폼
                 </div>
-                <div class="detail-btn-cont" data-aos="fade-right" data-aos-offset="50" data-aos-delay="400" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+                <div class="detail-btn-cont">
                   <button class="detail-btn">
-                    <a href="/business/botfender.html"> <span>VIEW DETAIL</span></a>
+                    <a href="/business/anomix.html"> <span>VIEW DETAIL</span></a>
                   </button>
                 </div>
               </div>
-              <div class="col-12 col-md-5 img-cont">
-                <div class="img">
-                  <img src="/src/assets/img/index/business-01.png" alt="image" data-aos="zoom-out" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom" />
-                </div>
-                <div class="icon">
-                  <img src="/src/assets/img/index/icon/business-01.png" alt="icon" />
+              <div class="col-12 col-md-8 img-cont img-cont-right">
+                <div class="img solution-image-slider" data-aos="zoom-out" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+                  <div><img src="/src/assets/img/anomix/anomix-01.png" alt="AnomixAI 화면 1" /></div>
+                  <div><img src="/src/assets/img/anomix/anomix-02.png" alt="AnomixAI 화면 2" /></div>
+                  <div><img src="/src/assets/img/anomix/anomix-03.png" alt="AnomixAI 화면 3" /></div>
+                  <div><img src="/src/assets/img/anomix/anomix-04.png" alt="AnomixAI 화면 4" /></div>
+                  <div><img src="/src/assets/img/anomix/anomix-05.png" alt="AnomixAI 화면 5" /></div>
+                  <div><img src="/src/assets/img/anomix/anomix-06.png" alt="AnomixAI 화면 6" /></div>
+                  <div><img src="/src/assets/img/anomix/anomix-07.png" alt="AnomixAI 화면 7" /></div>
                 </div>
               </div>
             </div>
 
-            <!-- <div class="business-content container">
-              <div class="col-5 img-cont overflow-hidden">
-                <img src="/src/assets/img/index/business-01.png" alt="image" data-aos="zoom-out" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom" />
-              </div>
-              <div class="col-7 right-content">
-                <div class="no" data-aos="fade-left" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">BUSINESS 02</div>
-                <div class="title" data-aos="fade-left" data-aos-offset="50" data-aos-delay="200" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">실시간 악성 봇(매크로) 탐지/방어</div>
-                <div class="desc" data-aos="fade-left" data-aos-offset="50" data-aos-delay="300" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
-                  BotfenderAI(봇펜더AI)는 악성 봇 & 불법 매크로에 대해 <br />
-                  인공지능(AI/ML)기반의 실시간(Real-time) 탐지를 제공하고 <br />
-                  다양한 위협의 신속한 차단 및 방어를 지원합니다.
+            <div class="business-content container flex-column row-gap-5 flex-md-row row-gap-md-0">
+              <div class="col-12 col-md-8 img-cont img-cont-left">
+                <div class="img solution-image-slider" data-aos="zoom-out" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+                  <div><img src="/src/assets/img/botfender/screens/botfenderai-01.png" alt="BotfenderAI 화면 1" /></div>
+                  <div><img src="/src/assets/img/botfender/screens/botfenderai-02.png" alt="BotfenderAI 화면 2" /></div>
+                  <div><img src="/src/assets/img/botfender/screens/botfenderai-03.png" alt="BotfenderAI 화면 3" /></div>
+                  <div><img src="/src/assets/img/botfender/screens/botfenderai-04.png" alt="BotfenderAI 화면 4" /></div>
                 </div>
-                <div class="detail-btn-cont" data-aos="fade-left" data-aos-offset="50" data-aos-delay="400" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+              </div>
+              <div class="col-12 col-md-4 right-content solution-copy" data-aos="fade-left" data-aos-offset="50" data-aos-delay="100" data-aos-duration="600" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+                <div class="no">SOLUTION 02</div>
+                <div class="title">BotfenderAI</div>
+                <div class="desc">
+                  웹·앱 서비스의 악성 봇 및 <br />자동화 접근 대응 솔루션
+                </div>
+                <div class="detail-btn-cont">
                   <button class="detail-btn">
                     <a href="/business/botfender.html"> <span>VIEW DETAIL</span></a>
                   </button>
                 </div>
               </div>
-            </div> -->
+            </div>
+
+            <div class="business-content container flex-column-reverse row-gap-5 flex-md-row row-gap-md-0" hidden>
+              <div class="col-12 col-md-4 solution-copy" data-aos="fade-right" data-aos-offset="50" data-aos-delay="100" data-aos-duration="600" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+                <div class="no">SOLUTION 03</div>
+                <div class="title">AX Builder</div>
+                <div class="desc">
+                  개발, 검증, 납품 리포트까지 통제 가능한 <br />AI 업무 자동화 플랫폼
+                </div>
+                <div class="detail-btn-cont">
+                  <button class="detail-btn">
+                    <a href="/business/gaepan.html"> <span>VIEW DETAIL</span></a>
+                  </button>
+                </div>
+              </div>
+              <div class="col-12 col-md-8 img-cont img-cont-right">
+                <div class="img solution-image-slider" data-aos="zoom-out" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+                  <div><img src="/src/assets/img/devPaan/devPaan-01.png" alt="AX Builder 화면 1" /></div>
+                  <div><img src="/src/assets/img/devPaan/devPann-02.png" alt="AX Builder 화면 2" /></div>
+                  <div><img src="/src/assets/img/devPaan/devPann-03.png" alt="AX Builder 화면 3" /></div>
+                  <div><img src="/src/assets/img/devPaan/devPann-04.png" alt="AX Builder 화면 4" /></div>
+                  <div><img src="/src/assets/img/devPaan/devPann-05.png" alt="AX Builder 화면 5" /></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="business-content container flex-column row-gap-5 flex-md-row row-gap-md-0">
+              <div class="col-12 col-md-8 img-cont img-cont-left">
+                <div class="img solution-image-slider" data-aos="zoom-out" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+                  <div><img src="/src/assets/img/vms/vms-01.png" alt="NX VMS 화면 1" /></div>
+                  <div><img src="/src/assets/img/vms/vms-02.png" alt="NX VMS 화면 2" /></div>
+                  <div><img src="/src/assets/img/vms/vms-03.png" alt="NX VMS 화면 3" /></div>
+                  <div><img src="/src/assets/img/vms/vms-04.png" alt="NX VMS 화면 4" /></div>
+                  <div><img src="/src/assets/img/vms/vms-05.png" alt="NX VMS 화면 5" /></div>
+                  <div><img src="/src/assets/img/vms/vms-06.png" alt="NX VMS 화면 6" /></div>
+                  <div><img src="/src/assets/img/vms/vms-07.png" alt="NX VMS 화면 7" /></div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 right-content solution-copy" data-aos="fade-left" data-aos-offset="50" data-aos-delay="100" data-aos-duration="600" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+                <div class="no">SOLUTION 04</div>
+                <div class="title">NX VMS</div>
+                <div class="desc">
+                  보안취약점 통합 관리 솔루션
+                </div>
+                <div class="detail-btn-cont">
+                  <button class="detail-btn">
+                    <a href="/business/v-vms.html"> <span>VIEW DETAIL</span></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="business-content container flex-column-reverse row-gap-5 flex-md-row row-gap-md-0">
+              <div class="col-12 col-md-4 solution-copy" data-aos="fade-right" data-aos-offset="50" data-aos-delay="100" data-aos-duration="600" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+                <div class="no">SOLUTION 05</div>
+                <div class="title">PentraFlow</div>
+                <div class="desc">
+                  Web/App/보안장비 등 <br />취약점 관리 솔루션
+                </div>
+                <div class="detail-btn-cont">
+                  <button class="detail-btn">
+                    <a href="/business/pentraflow.html"> <span>VIEW DETAIL</span></a>
+                  </button>
+                </div>
+              </div>
+              <div class="col-12 col-md-8 img-cont img-cont-right">
+                <div class="img solution-image-slider" data-aos="zoom-out" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+                  <div><img src="/src/assets/img/pentraflow/pentraflow-01.png" alt="PentraFlow 화면 1" /></div>
+                  <div><img src="/src/assets/img/pentraflow/pentraflow-02.png" alt="PentraFlow 화면 2" /></div>
+                  <div><img src="/src/assets/img/pentraflow/pentraflow-03.png" alt="PentraFlow 화면 3" /></div>
+                  <div><img src="/src/assets/img/pentraflow/pentraflow-04.png" alt="PentraFlow 화면 4" /></div>
+                </div>
+              </div>
+            </div>
           </section>
         </div>
       </div>
     </div>
-    <div id="footer">
-      <div class="footer-inner d-flex flex-column-reverse d-md-flex flex-md-row">
-        <div class="footer-left col-12 col-md-6">
-          <div class="footer-logo">
-            <img src="/src/assets/img/icon/white-full-logo.png" alt="logo" />
-          </div>
-          <div class="footer-info">
-            <ul class="footer-link">
-              <li><a href="/about/summary.html">회사소개</a></li>
-              <li><a href="/business/botfender.html">사업소개</a></li>
-              <li><a href="/recruitment/recruitment.html">인재채용</a></li>
-              <li><a href="/contact/contact.html">Contact Us</a></li>
-            </ul>
-            <div class="footer-info-item">
-              <span class="sub">(07332) 서울 영등포구 여의도동 의사당대로1길 11 <br class="d-block d-md-none" />대우매종리브르 1112호</span>
-              <br />
-              <span class="title">전화번호.</span>
-              <span class="sub">02-6953-4490</span>
-              <span class="title ms-4">팩스.</span>
-              <span class="sub">02-786-4490</span>
-            </div>
-            <div class="footer-copyright">
-              <span>Copyright© NEXTORY Co.,Ltd. 2024 All Rights Reserved.</span>
-            </div>
-          </div>
-        </div>
-        <div class="footer-right col-12 col-md-6">
-          <div class="copyright">
-            <div>for the next story</div>
-            <div>혁신적인 기술과 고객 중심의 서비스 기업<br />(주)네스토리</div>
-          </div>
-          <div class="pdf-container">
-            <button>
-              <a id="download-link" href="">
-                <span>회사소개서</span>
-                <img src="/src/assets/img/icon/download.png" alt="image" />
-              </a>
-            </button>
-            <button>
-              <a href="/src/files/brochure.pdf" download="BotfenderAI_브로슈어">
-                <span>botfenderAI V2.0 브로슈어</span>
-                <img src="/src/assets/img/icon/download.png" alt="image" />
-              </a>
-            </button>
-          </div>
-        </div>
-        <div id="footer-navigation" class="footer-navigation">
-          <button>PAGETOP</button>
-        </div>
-      </div>
-    </div>
+    <!-- partial:footer:start -->
+    <!-- partial:footer -->
+    <!-- partial:footer:end -->
 
-    <div class="popup-list">
+<div class="popup-list">
       <!-- <div class="popup-box" data-index="1" style="display: none;">
         <div class="content">
           <img src="/src/assets/img/popup/university.png" alt="">
@@ -432,50 +357,42 @@
           ],
         });
 
-        let scrollFlag = true;
-        $("#slick-container").on("DOMMouseScroll mousewheel", function (e) {
-          // e.preventDefault();
+        $(".solution-image-slider").each(function (idx) {
+          const $slider = $(this);
 
-          if (!scrollFlag) {
-            return false;
-          }
-          scrollFlag = false;
-          var E = e.originalEvent;
-          var delta = E.wheelDelta;
-          var fireE = e.originalEvent.detail;
-          let eType = e.type;
-          console.log(eType);
+          if ($slider.hasClass("slick-initialized")) return;
 
-          switch (eType) {
-            case "mousewheel":
-            case "DOMMouseScroll":
-              e.preventDefault();
-              console.log("delta", delta);
-              console.log("fireE", fireE);
-              if (!$(".dummy").length) {
-                if (delta < 0 || fireE > 0) {
-                  htmlBodyAnimate($("#business-container").offset().top);
-                } else {
-                  htmlBodyAnimate($("#slick-container").offset().top);
-                }
-              }
-              break;
-            case "touchstart":
-              touchStart = e.originalEvent.changedTouches[0].screenY;
-              break;
-            case "touchend":
-              touchEnd = e.originalEvent.changedTouches[0].screenY;
-              let pageY = touchStart - touchEnd;
-              if (pageY > 0) {
-                if (!$(".dummy").length) {
-                  htmlBodyAnimate($("#business-container").offset().top);
-                }
-              } else {
-              }
-              break;
-            default:
-              break;
-          }
+          $slider.on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+            const $current = $(slick.$slides.get(currentSlide));
+            const $next = $(slick.$slides.get(nextSlide));
+
+            slick.$slides.removeClass("solution-slide-in solution-slide-out");
+            $current.addClass("solution-slide-out");
+            $next.addClass("solution-slide-in");
+          });
+
+          $slider.on("afterChange", function (event, slick) {
+            window.setTimeout(function () {
+              slick.$slides.removeClass("solution-slide-in solution-slide-out");
+            }, 120);
+          });
+
+          $slider.slick({
+            fade: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2600 + idx * 300,
+            infinite: true,
+            dots: true,
+            arrows: false,
+            speed: 1150,
+            cssEase: "linear",
+            swipe: true,
+            touchMove: true,
+            pauseOnFocus: false,
+            pauseOnHover: false,
+          });
         });
 
         let dots = $("#slick-container").find(".slideDots button");
@@ -496,66 +413,23 @@
           // $("#slick-banner-list").find(".mask").slick("slickGoTo", idx);
         });
 
-        function htmlBodyAnimate(pos) {
-          dummyCreate();
-          $("body").css({
-            overflow: "hidden",
-          });
-          $("html,body")
-            .stop()
-            .animate(
-              {
-                scrollTop: pos,
-              },
-              0,
-              function () {
-                if ($(".dummy").length) {
-                  setTimeout(() => {
-                    dummyRemove();
-                    if (pos > 0) {
-                      $("html,body").css({
-                        overflow: "visible",
-                      });
-                    }
-                    scrollFlag = true;
-                  }, 400);
-                }
-              }
-            );
-        }
-
-        function dummyCreate() {
-          if (!$(".dummy").length) {
-            $("body").append("<div class='dummy'></div>");
-          }
-
-          $(".dummy").on("DOMScroll mousewheel DOMMousewheel touchstart touchend", function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-            return false;
-          });
-        }
-
-        function dummyRemove() {
-          $(".dummy").remove();
-        }
-
         let business = $("#business-container");
         let slideText = $(".slide-text");
         let winH = window.innerHeight;
         let winW = window.innerWidth;
         $(window).on("scroll", function (e) {
-          let eType = e.type;
-          let yScroll = window.scrollY;
-          let busiPadding = parseInt(business.css("paddingTop").replace("px", ""));
-          // let busiHeight = business.innerHeight();
           winW = window.innerWidth;
           winH = window.innerHeight;
+          let yScroll = window.scrollY;
+          let busiTop = business.offset().top;
+          let busiHeight = business.outerHeight();
+          let slideStart = busiTop - winH;
+          let slideEnd = busiTop + busiHeight;
 
-          if (business.offset().top <= yScroll + busiPadding) {
+          if (yScroll >= slideStart && yScroll <= slideEnd) {
             slideText.addClass("on");
 
-            calcVal = (yScroll - winH * 2) / business.offset().top;
+            let calcVal = (yScroll - slideStart) / (slideEnd - slideStart);
             if (!slideText.hasClass("fix")) {
               slideText.find(".left").css({
                 transform: `translateX(${calcVal * 10}%)`,
@@ -566,9 +440,13 @@
             }
           } else {
             slideText.removeClass("on");
+            slideText.find(".left, .right").css({
+              transform: "translateX(0)",
+            });
           }
-        });
+        }).trigger("scroll");
       });
     </script>
+
   </body>
 </html>
