@@ -39,7 +39,6 @@
 
     <!-- 외부 라이브러리 -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- 외부 라이브러리 -->
 
     <!-- 코어 라이브러리 -->
@@ -223,47 +222,75 @@
             <li>
               <i class="fas fa-angle-right"></i>
             </li>
-            <li><span>문의하기</span></li>
+            <li><span>오시는 길</span></li>
           </ul>
         </div>
         <div class="contents container">
-          <section class="section-2">
-            <div class="title" data-aos="fade-up" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">문의하기</div>
-            <div class="sub-title overflow-hidden">
-              <div data-aos="fade-up" data-aos-offset="50" data-aos-delay="200" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">제품관련 문의는 모든 항목을 작성해 주셔야 합니다.</div>
-              <div data-aos="fade-up" data-aos-offset="50" data-aos-delay="300" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">빠르고 친절하게 답변 드리겠습니다.</div>
+          <section class="section-1">
+            <div class="title" data-aos="fade-up" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">오시는 길</div>
+            <div class="map-container">
+              <div id="map" class="map" data-aos="zoom-out" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom"></div>
+              <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a1cc041ff5b2815990e83abf8548f336&libraries=services"></script>
+              <script>
+                let container = document.getElementById("map");
+                let officeAddress = "서울 영등포구 국회대로 632";
+                let options = {
+                  center: new kakao.maps.LatLng(37.520756, 126.913622),
+                  level: 3,
+                };
+
+                let map = new kakao.maps.Map(container, options);
+                let geocoder = new kakao.maps.services.Geocoder();
+
+                geocoder.addressSearch(officeAddress, function (result, status) {
+                  if (status !== kakao.maps.services.Status.OK) return;
+
+                  let markerPosition = new kakao.maps.LatLng(result[0].y, result[0].x);
+                  let marker = new kakao.maps.CustomOverlay({
+                    position: markerPosition,
+                    content: '<div style="padding:8px 14px;border:1px solid #222;border-radius:4px;background:#fff;color:#111;font-size:14px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.18);white-space:nowrap;">(주)네스토리</div>',
+                    yAnchor: 1.35,
+                  });
+
+                  marker.setMap(map);
+                  map.setCenter(markerPosition);
+                });
+              </script>
             </div>
-            <div class="d-flex flex-column row-gap-5 flex-md-row row-gap-md-0">
-              <div class="col-12 col-md-6 overflow-hidden">
-                <img class="w-100" src="/assets/01-DJXD6FN-.png" alt="image" data-aos="zoom-out" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom" />
-              </div>
-              <div class="col-12 col-md-6 form ps-0 ps-md-4 d-flex flex-wrap align-items-start" data-aos="fade-in" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
-                <input type="text" id="company" class="w-100" placeholder="기업/기관명" />
-                <input type="text" id="name" class="left" placeholder="성명" />
-                <input type="text" id="contact" class="right" placeholder="연락처" />
-                <select name="" id="solution" class="left" required>
-                  <option value="" disabled selected>솔루션 선택</option>
-                  <option value="AnomixAI">AnomixAI</option>
-                  <option value="BotfenderAI">BotfenderAI</option>
-                  <option value="AX Builder" hidden disabled>AX Builder</option>
-                  <option value="NX VMS">NX VMS</option>
-                  <option value="PentraFlow">PentraFlow</option>
-                </select>
-                <input type="text" id="email" class="right" placeholder="이메일" />
-                <textarea name="" id="contents" class="w-100" rows="8" placeholder="문의내용"></textarea>
-                <div class="btn-container">
+            <ul class="box-list d-flex justify-content-between mt-5 flex-column flex-md-row" data-aos="fade-in" data-aos-offset="50" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-bottom">
+              <li class="p-2 d-flex align-items-center">
+                <div class="img-cont">
+                  <img src="/assets/gps-BYJweW5g.png" alt="image" />
+                </div>
+                <div class="info-cont d-flex flex-column">
+                  <p>주소</p>
+                  <div>서울 영등포구 국회대로 632</div>
+                  <div>1306호(영등포동 7가, 케이엘케이유윈시티)</div>
+                </div>
+              </li>
+              <li class="p-2 d-flex align-items-center">
+                <div class="img-cont">
+                  <img src="/assets/telephone-fyY171fl.png" alt="image" />
+                </div>
+                <div class="info-cont d-flex flex-column">
+                  <p>연락처</p>
+                  <div>T. 02-6953-4490</div>
+                  <div>F. 02-786-4490</div>
+                </div>
+              </li>
+              <li class="p-2 d-flex align-items-center">
+                <div class="img-cont">
+                  <img src="/assets/train-HvNtDgXa.png" alt="image" />
+                </div>
+                <div class="info-cont d-flex flex-column">
+                  <p>지하철 이용 시</p>
                   <div class="d-flex align-items-center">
-                    <input type="checkbox" name="" id="check" />
-                    <label for="check" class="custom-checkbox"></label>
-                    <label for="check">개인정보 수집 및 이용에 동의합니다.</label>
-                    <a href="/privacy/privacy.html" target="_blank">내용보기</a>
-                  </div>
-                  <div>
-                    <button id="send-btn">문의하기</button>
+                    <div class="train train-5 me-2">5</div>
+                    <span>영등포시장역 1번 출구 도보 5분 거리</span>
                   </div>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </section>
         </div>
       </div>
@@ -316,65 +343,5 @@
     </div>
     <!-- partial:footer:end -->
 
-    <script>
-      (function () {
-        emailjs.init({
-          publicKey: "1wcs0MqB2sGqdl4jy",
-        });
-
-        const $sendBtn = $("#send-btn");
-        $sendBtn.off().on("click", function () {
-          if ($("#company").val() == "") {
-            alert("기업/기관명을 입력해주세요.");
-            return false;
-          }
-          if ($("#name").val() == "") {
-            alert("성명을 입력해주세요.");
-            return false;
-          }
-          if ($("#contact").val() == "") {
-            alert("연락처를 입력해주세요.");
-            return false;
-          }
-          if (!$("#solution").val()) {
-            alert("솔루션을 선택해주세요.");
-            return false;
-          }
-          if ($("#email").val() == "") {
-            alert("이메일을 입력해주세요.");
-            return false;
-          }
-          if ($("#contents").val() == "") {
-            alert("문의내용을 입력해주세요.");
-            return false;
-          }
-          if (!$("#check").is(":checked")) {
-            alert("개인정보 수집 및 이용에 동의가 필요합니다.");
-            return false;
-          }
-
-          if (confirm("문의 메일을 전송하시겠습니까?")) {
-            let templateParams = {
-              company: $("#company").val(),
-              name: $("#name").val(),
-              contact: $("#contact").val(),
-              path: $("#solution").val(),
-              solution: $("#solution").val(),
-              email: $("#email").val(),
-              contents: $("#contents").val(),
-            };
-
-            emailjs.send("nextory", "nextory_template", templateParams).then(
-              function (response) {
-                console.log("SUCCESS!", response.status, response.text);
-              },
-              function (err) {
-                console.log("FAILED...", err);
-              }
-            );
-          }
-        });
-      })();
-    </script>
   </body>
 </html>
