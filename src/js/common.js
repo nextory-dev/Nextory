@@ -1,3 +1,70 @@
+const LOADING_BLIND_MIN_DURATION = 2000;
+const BOTFENDER_DEMO_SCRIPT_SRC = "https://api-demo.botfenderai.kr:3021/1dba6f43-e141-4072-9d29-3a531d8bf1dc";
+const loadingBlindStartedAt = window.__nextoryLoadingBlind?.startedAt ?? performance.now();
+let loadingBlindMinTimePassed = false;
+let loadingBlindPageLoaded = document.readyState === "complete";
+
+function loadBotfenderDemoScript() {
+  if (document.querySelector(`script[src="${BOTFENDER_DEMO_SCRIPT_SRC}"]`)) return;
+
+  const script = document.createElement("script");
+  script.src = BOTFENDER_DEMO_SCRIPT_SRC;
+  script.async = true;
+  document.head.appendChild(script);
+}
+
+function loadBotfenderDemoScriptAfterPageLoad() {
+  if (document.readyState === "complete") {
+    loadBotfenderDemoScript();
+    return;
+  }
+
+  window.addEventListener("load", loadBotfenderDemoScript, { once: true });
+}
+
+function hideLoadingBlind() {
+  const root = document.documentElement;
+  if (!root.classList.contains("loading-blind-active")) return;
+
+  root.classList.add("loading-blind-exiting");
+  root.setAttribute("aria-busy", "false");
+
+  window.setTimeout(() => {
+    document.querySelector(".loading-blind-text")?.remove();
+    root.classList.remove("loading-blind-active", "loading-blind-exiting");
+    root.removeAttribute("aria-busy");
+    window.scrollTo(window.__nextoryLoadingBlind?.scrollX ?? 0, window.__nextoryLoadingBlind?.scrollY ?? 0);
+    loadBotfenderDemoScript();
+  }, 300);
+}
+
+if (!window.__nextoryLoadingBlind?.enabled) {
+  loadBotfenderDemoScriptAfterPageLoad();
+}
+
+function tryHideLoadingBlind() {
+  if (!loadingBlindMinTimePassed || !loadingBlindPageLoaded) return;
+  hideLoadingBlind();
+}
+
+window.setTimeout(() => {
+  loadingBlindMinTimePassed = true;
+  tryHideLoadingBlind();
+}, Math.max(0, LOADING_BLIND_MIN_DURATION - (performance.now() - loadingBlindStartedAt)));
+
+if (loadingBlindPageLoaded) {
+  tryHideLoadingBlind();
+} else {
+  window.addEventListener(
+    "load",
+    () => {
+      loadingBlindPageLoaded = true;
+      tryHideLoadingBlind();
+    },
+    { once: true },
+  );
+}
+
 $(document).ready(function () {
   AOS.init();
 

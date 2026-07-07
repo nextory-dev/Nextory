@@ -1,173 +1,188 @@
-@font-face {
-  font-family: AppleSDGothicNeo;
-  font-weight: 100;
-  src: url("./AppleSDGothicNeo/AppleSDGothicNeoT.ttf") format("truetype");
-}
+// Unused AppleSDGothicNeo weights are kept here for reference, but not loaded.
+// @font-face {
+//   font-family: AppleSDGothicNeo;
+//   font-weight: 100;
+//   src: url("./AppleSDGothicNeo/AppleSDGothicNeoT.ttf") format("truetype");
+// }
 
-@font-face {
-  font-family: AppleSDGothicNeo;
-  font-weight: 200;
-  src: url("./AppleSDGothicNeo/AppleSDGothicNeoUL.ttf") format("truetype");
-}
+// @font-face {
+//   font-family: AppleSDGothicNeo;
+//   font-weight: 200;
+//   src: url("./AppleSDGothicNeo/AppleSDGothicNeoUL.ttf") format("truetype");
+// }
 
 @font-face {
   font-family: AppleSDGothicNeo;
   font-weight: 300;
+  font-display: swap;
   src: url("./AppleSDGothicNeo/AppleSDGothicNeoL.ttf") format("truetype");
 }
 
 @font-face {
   font-family: AppleSDGothicNeo;
   font-weight: 400;
+  font-display: swap;
   src: url("./AppleSDGothicNeo/AppleSDGothicNeoR.ttf") format("truetype");
 }
 
 @font-face {
   font-family: AppleSDGothicNeo;
   font-weight: 500;
+  font-display: swap;
   src: url("./AppleSDGothicNeo/AppleSDGothicNeoM.ttf") format("truetype");
 }
 
 @font-face {
   font-family: AppleSDGothicNeo;
   font-weight: 600;
+  font-display: swap;
   src: url("./AppleSDGothicNeo/AppleSDGothicNeoSB.ttf") format("truetype");
 }
 
 @font-face {
   font-family: AppleSDGothicNeo;
   font-weight: 700;
+  font-display: swap;
   src: url("./AppleSDGothicNeo/AppleSDGothicNeoB.ttf") format("truetype");
 }
 
 @font-face {
   font-family: AppleSDGothicNeo;
   font-weight: 800;
+  font-display: swap;
   src: url("./AppleSDGothicNeo/AppleSDGothicNeoEB.ttf") format("truetype");
 }
 
-@font-face {
-  font-family: AppleSDGothicNeo;
-  font-weight: 900;
-  src: url("./AppleSDGothicNeo/AppleSDGothicNeoH.ttf") format("truetype");
-}
+// @font-face {
+//   font-family: AppleSDGothicNeo;
+//   font-weight: 900;
+//   src: url("./AppleSDGothicNeo/AppleSDGothicNeoH.ttf") format("truetype");
+// }
+
+// Pretendard is not referenced by font-family in the current site.
+// @font-face {
+//   font-family: "Pretendard";
+//   font-weight: 900;
+//   font-display: swap;
+//   src: local("Pretendard Black"), url("./Pretendard/Pretendard-Black.woff2") format("woff2"), url("./Pretendard/Pretendard-Black.woff") format("woff");
+// }
+
+// @font-face {
+//   font-family: "Pretendard";
+//   font-weight: 800;
+//   font-display: swap;
+//   src: local("Pretendard ExtraBold"), url("./Pretendard/Pretendard-ExtraBold.woff2") format("woff2"), url("./Pretendard/Pretendard-ExtraBold.woff") format("woff");
+// }
+
+// @font-face {
+//   font-family: "Pretendard";
+//   font-weight: 700;
+//   font-display: swap;
+//   src: local("Pretendard Bold"), url("./Pretendard/Pretendard-Bold.woff2") format("woff2"), url("./Pretendard/Pretendard-Bold.woff") format("woff");
+// }
+
+// @font-face {
+//   font-family: "Pretendard";
+//   font-weight: 600;
+//   font-display: swap;
+//   src: local("Pretendard SemiBold"), url("./Pretendard/Pretendard-SemiBold.woff2") format("woff2"), url("./Pretendard/Pretendard-SemiBold.woff") format("woff");
+// }
+
+// @font-face {
+//   font-family: "Pretendard";
+//   font-weight: 500;
+//   font-display: swap;
+//   src: local("Pretendard Medium"), url("./Pretendard/Pretendard-Medium.woff2") format("woff2"), url("./Pretendard/Pretendard-Medium.woff") format("woff");
+// }
+
+// @font-face {
+//   font-family: "Pretendard";
+//   font-weight: 400;
+//   font-display: swap;
+//   src: local("Pretendard Regular"), url("./Pretendard/Pretendard-Regular.woff2") format("woff2"), url("./Pretendard/Pretendard-Regular.woff") format("woff");
+// }
+
+// @font-face {
+//   font-family: "Pretendard";
+//   font-weight: 300;
+//   font-display: swap;
+//   src: local("Pretendard Light"), url("./Pretendard/Pretendard-Light.woff2") format("woff2"), url("./Pretendard/Pretendard-Light.woff") format("woff");
+// }
+
+// @font-face {
+//   font-family: "Pretendard";
+//   font-weight: 200;
+//   font-display: swap;
+//   src: local("Pretendard ExtraLight"), url("./Pretendard/Pretendard-ExtraLight.woff2") format("woff2"), url("./Pretendard/Pretendard-ExtraLight.woff") format("woff");
+// }
+
+// @font-face {
+//   font-family: "Pretendard";
+//   font-weight: 100;
+//   font-display: swap;
+//   src: local("Pretendard Thin"), url("./Pretendard/Pretendard-Thin.woff2") format("woff2"), url("./Pretendard/Pretendard-Thin.woff") format("woff");
+// }
+
+// Unused NotoSansKR fallback weights are kept here for reference, but not loaded.
+// @font-face {
+//   font-family: NotoSansKR;
+//   font-weight: 100;
+//   src: url("./Noto_Sans_KR/static/NotoSansKR-Thin.ttf") format("truetype");
+// }
+
+// @font-face {
+//   font-family: NotoSansKR;
+//   font-weight: 200;
+//   src: url("./Noto_Sans_KR/static/NotoSansKR-ExtraLight.ttf") format("truetype");
+// }
 
 @font-face {
-  font-family: "Pretendard";
-  font-weight: 900;
-  font-display: swap;
-  src: local("Pretendard Black"), url("./Pretendard/Pretendard-Black.woff2") format("woff2"), url("./Pretendard/Pretendard-Black.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 800;
-  font-display: swap;
-  src: local("Pretendard ExtraBold"), url("./Pretendard/Pretendard-ExtraBold.woff2") format("woff2"), url("./Pretendard/Pretendard-ExtraBold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 700;
-  font-display: swap;
-  src: local("Pretendard Bold"), url("./Pretendard/Pretendard-Bold.woff2") format("woff2"), url("./Pretendard/Pretendard-Bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 600;
-  font-display: swap;
-  src: local("Pretendard SemiBold"), url("./Pretendard/Pretendard-SemiBold.woff2") format("woff2"), url("./Pretendard/Pretendard-SemiBold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 500;
-  font-display: swap;
-  src: local("Pretendard Medium"), url("./Pretendard/Pretendard-Medium.woff2") format("woff2"), url("./Pretendard/Pretendard-Medium.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 400;
-  font-display: swap;
-  src: local("Pretendard Regular"), url("./Pretendard/Pretendard-Regular.woff2") format("woff2"), url("./Pretendard/Pretendard-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Pretendard";
+  font-family: NotoSansKR;
   font-weight: 300;
   font-display: swap;
-  src: local("Pretendard Light"), url("./Pretendard/Pretendard-Light.woff2") format("woff2"), url("./Pretendard/Pretendard-Light.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 200;
-  font-display: swap;
-  src: local("Pretendard ExtraLight"), url("./Pretendard/Pretendard-ExtraLight.woff2") format("woff2"), url("./Pretendard/Pretendard-ExtraLight.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 100;
-  font-display: swap;
-  src: local("Pretendard Thin"), url("./Pretendard/Pretendard-Thin.woff2") format("woff2"), url("./Pretendard/Pretendard-Thin.woff") format("woff");
-}
-
-@font-face {
-  font-family: NotoSansKR;
-  font-weight: 100;
-  src: url("./Noto_Sans_KR/static/NotoSansKR-Thin.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: NotoSansKR;
-  font-weight: 200;
-  src: url("./Noto_Sans_KR/static/NotoSansKR-ExtraLight.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: NotoSansKR;
-  font-weight: 300;
   src: url("./Noto_Sans_KR/static/NotoSansKR-Light.ttf") format("truetype");
 }
 
 @font-face {
   font-family: NotoSansKR;
   font-weight: 400;
+  font-display: swap;
   src: url("./Noto_Sans_KR/static/NotoSansKR-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: NotoSansKR;
   font-weight: 500;
+  font-display: swap;
   src: url("./Noto_Sans_KR/static/NotoSansKR-Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-family: NotoSansKR;
   font-weight: 600;
+  font-display: swap;
   src: url("./Noto_Sans_KR/static/NotoSansKR-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: NotoSansKR;
   font-weight: 700;
+  font-display: swap;
   src: url("./Noto_Sans_KR/static/NotoSansKR-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: NotoSansKR;
   font-weight: 800;
+  font-display: swap;
   src: url("./Noto_Sans_KR/static/NotoSansKR-ExtraBold.ttf") format("truetype");
 }
 
-@font-face {
-  font-family: NotoSansKR;
-  font-weight: 900;
-  src: url("./Noto_Sans_KR/static/NotoSansKR-Black.ttf") format("truetype");
-}
+// @font-face {
+//   font-family: NotoSansKR;
+//   font-weight: 900;
+//   src: url("./Noto_Sans_KR/static/NotoSansKR-Black.ttf") format("truetype");
+// }
 
 body {
   font-family: "AppleSDGothicNeo", "NotoSansKR", sans-serif;
