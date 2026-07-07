@@ -1,11 +1,227 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <!-- partial:head-scripts:start -->
-<script src="https://api-demo.botfenderai.kr:3021/1dba6f43-e141-4072-9d29-3a531d8bf1dc" defer></script>
-    <!-- partial:head-scripts:end -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- partial:head-scripts:start -->
+<style>
+  @property --loading-fill {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 0%;
+  }
+
+  html.loading-blind-active,
+  html.loading-blind-active body {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+    touch-action: none;
+  }
+
+  html.loading-blind-active::before,
+  .loading-blind-text {
+    position: fixed;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  html.loading-blind-active::before {
+    content: "";
+    inset: 0;
+    z-index: 2147483646;
+    background: #000;
+    pointer-events: all;
+  }
+
+  .loading-blind-text {
+    top: 50%;
+    left: 50%;
+    z-index: 2147483647;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .loading-blind-text span {
+    display: inline-block;
+    color: #fff;
+    overflow: hidden;
+    vertical-align: bottom;
+  }
+
+  .loading-blind-text__for {
+    max-width: 4.3em;
+    animation: loadingBlindForOut 2s ease-in-out forwards;
+  }
+
+  .loading-blind-text__nex {
+    --loading-fill: 0%;
+
+    background-image: linear-gradient(to top, #fac001 0 var(--loading-fill), #fff var(--loading-fill) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation:
+      loadingBlindFillOnce 2s linear forwards,
+      loadingBlindFillLoop 2s linear 2s infinite;
+  }
+
+  .loading-blind-text__t {
+    max-width: 0.42em;
+    animation: loadingBlindTOut 2s ease-in-out forwards;
+  }
+
+  .loading-blind-text__s {
+    max-width: 1em;
+    animation: loadingBlindSOut 2s ease-in-out forwards;
+  }
+
+  .loading-blind-text__tory {
+    --loading-fill: 0%;
+
+    background-image: linear-gradient(to top, #fac001 0 var(--loading-fill), #fff var(--loading-fill) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation:
+      loadingBlindFillOnce 2s linear forwards,
+      loadingBlindFillLoop 2s linear 2s infinite;
+  }
+
+  html.loading-blind-exiting::before,
+  html.loading-blind-exiting .loading-blind-text {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @keyframes loadingBlindForOut {
+    0%,
+    10% {
+      max-width: 4.3em;
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+    }
+
+    70%,
+    100% {
+      max-width: 0;
+      opacity: 0;
+      filter: blur(4px);
+      transform: translateX(-1.6em);
+    }
+  }
+
+  @keyframes loadingBlindTOut {
+    0%,
+    10% {
+      max-width: 0.42em;
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+
+    70%,
+    100% {
+      max-width: 0;
+      opacity: 0;
+      transform: translateY(0.9em);
+      filter: blur(4px);
+    }
+  }
+
+  @keyframes loadingBlindSOut {
+    0%,
+    10% {
+      max-width: 1em;
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+
+    70%,
+    100% {
+      max-width: 0;
+      opacity: 0;
+      transform: translateY(-0.9em);
+      filter: blur(4px);
+    }
+  }
+
+  @keyframes loadingBlindFillOnce {
+    0%,
+    70% {
+      --loading-fill: 0%;
+    }
+
+    100% {
+      --loading-fill: 100%;
+    }
+  }
+
+  @keyframes loadingBlindFillLoop {
+    0% {
+      --loading-fill: 0%;
+    }
+
+    100% {
+      --loading-fill: 100%;
+    }
+  }
+</style>
+<script>
+  (function () {
+    var root = document.documentElement;
+    var scrollX = window.pageXOffset || root.scrollLeft || 0;
+    var scrollY = window.pageYOffset || root.scrollTop || 0;
+    var path = window.location.pathname.replace(/\/+$/, "") || "/";
+    var isRootIndex = path === "/" || path.endsWith("/index.html");
+    var isFirstSession = false;
+
+    try {
+      isFirstSession = sessionStorage.getItem("nextory-loading-blind-seen") !== "true";
+      sessionStorage.setItem("nextory-loading-blind-seen", "true");
+    } catch (error) {
+      isFirstSession = true;
+    }
+
+    window.__nextoryLoadingBlind = {
+      enabled: isFirstSession || isRootIndex,
+      startedAt: performance.now(),
+      scrollX: scrollX,
+      scrollY: scrollY,
+    };
+
+    if (!window.__nextoryLoadingBlind.enabled) return;
+
+    root.classList.add("loading-blind-active");
+    root.setAttribute("aria-busy", "true");
+
+    var text = document.createElement("div");
+    text.className = "loading-blind-text";
+    text.setAttribute("aria-hidden", "true");
+    text.innerHTML = '<span class="loading-blind-text__for">For the&nbsp;</span><span class="loading-blind-text__nex">Nex</span><span class="loading-blind-text__t">t</span><span class="loading-blind-text__s">&nbsp;S</span><span class="loading-blind-text__tory">tory</span>';
+    root.appendChild(text);
+
+    document.addEventListener(
+      "touchmove",
+      function (event) {
+        if (root.classList.contains("loading-blind-active")) {
+          event.preventDefault();
+        }
+      },
+      { passive: false },
+    );
+  })();
+</script>
+    <!-- partial:head-scripts:end -->
     <title>(주)네스토리</title>
 
     <meta name="robots" content="index,follow">
@@ -43,9 +259,9 @@
 
     <!-- 코어 라이브러리 -->
     <!-- 코어 라이브러리 -->
-    <script type="module" crossorigin src="/assets/aboutSummary-BT1pcNDZ.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/footer-BHL4rnii.js">
-    <link rel="stylesheet" crossorigin href="/assets/footer-BXvB_JM5.css">
+    <script type="module" crossorigin src="/assets/aboutSummary-CNHaZAt5.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/footer-7aQB-FPa.js">
+    <link rel="stylesheet" crossorigin href="/assets/footer-Df1u2kMP.css">
     <link rel="stylesheet" crossorigin href="/assets/aboutSummary-DwYMZaAG.css">
   </head>
   <body>
