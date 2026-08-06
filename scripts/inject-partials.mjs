@@ -7,6 +7,7 @@ const pages = [
   "index.html",
   "about/summary.html",
   "about/history.html",
+  "about/certification.html",
   "business/anomix.html",
   "business/botfender.html",
   "business/gaepan.html",

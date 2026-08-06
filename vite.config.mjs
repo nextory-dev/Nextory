@@ -28,6 +28,7 @@ export default defineConfig({
         index: resolve(generatedRoot, "index.html"),
         aboutSummary: resolve(generatedRoot, "about/summary.html"),
         aboutHistory: resolve(generatedRoot, "about/history.html"),
+        aboutCertification: resolve(generatedRoot, "about/certification.html"),
         businessAnomix: resolve(generatedRoot, "business/anomix.html"),
         businessBotfender: resolve(generatedRoot, "business/botfender.html"),
         businessGaepan: resolve(generatedRoot, "business/gaepan.html"),
