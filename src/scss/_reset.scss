@@ -40,6 +40,20 @@ html {
 
 @media (max-width: 768px) {
   html {
-    font-size: 10px;
+    font-size: 12px;
+
+    body {
+      font-size: 1rem;
+
+      small,
+      .small,
+      .figure-caption,
+      .blockquote-footer,
+      code,
+      pre,
+      kbd {
+        font-size: 1rem;
+      }
+    }
   }
 }
