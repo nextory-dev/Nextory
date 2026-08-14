@@ -10,7 +10,7 @@ const pages = [
   "about/certification.html",
   "business/anomix.html",
   "business/botfender.html",
-  "business/gaepan.html",
+  "business/ax-builder.html",
   "business/v-vms.html",
   "business/pentraflow.html",
   "recruitment/recruitment.html",

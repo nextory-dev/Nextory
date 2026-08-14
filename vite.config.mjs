@@ -31,7 +31,7 @@ export default defineConfig({
         aboutCertification: resolve(generatedRoot, "about/certification.html"),
         businessAnomix: resolve(generatedRoot, "business/anomix.html"),
         businessBotfender: resolve(generatedRoot, "business/botfender.html"),
-        businessGaepan: resolve(generatedRoot, "business/gaepan.html"),
+        businessAxBuilder: resolve(generatedRoot, "business/ax-builder.html"),
         businessVvms: resolve(generatedRoot, "business/v-vms.html"),
         businessPentraflow: resolve(generatedRoot, "business/pentraflow.html"),
         recruitment: resolve(generatedRoot, "recruitment/recruitment.html"),
