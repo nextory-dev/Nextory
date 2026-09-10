@@ -127,44 +127,99 @@
     <!-- partial:footer -->
     <!-- partial:footer:end -->
 
+    <dialog id="contact-dialog" class="contact-dialog" aria-labelledby="contact-dialog-title" aria-describedby="contact-dialog-message">
+      <div id="contact-dialog-icon" class="contact-dialog__icon" aria-hidden="true">!</div>
+      <h2 id="contact-dialog-title">안내</h2>
+      <p id="contact-dialog-message"></p>
+      <a id="contact-dialog-phone" class="contact-dialog__phone" href="tel:0269534490" hidden>전화 문의하기 · 02-6953-4490</a>
+      <div class="contact-dialog__actions">
+        <button id="contact-dialog-cancel" class="contact-dialog__cancel" type="button" hidden>취소</button>
+        <button id="contact-dialog-ok" class="contact-dialog__ok" type="button" autofocus>확인</button>
+      </div>
+    </dialog>
+
     <script>
       (function () {
-        emailjs.init({
-          publicKey: "1wcs0MqB2sGqdl4jy",
-        });
-
         const $sendBtn = $("#send-btn");
-        $sendBtn.off().on("click", function () {
+        const dialog = document.getElementById("contact-dialog");
+        const dialogOk = document.getElementById("contact-dialog-ok");
+        const dialogCancel = document.getElementById("contact-dialog-cancel");
+        let resolveConfirmation = null;
+        dialogOk.addEventListener("click", () => dialog.close("confirm"));
+        dialogCancel.addEventListener("click", () => dialog.close("cancel"));
+        dialog.addEventListener("close", () => {
+          const resolve = resolveConfirmation;
+          resolveConfirmation = null;
+          if (resolve) resolve(dialog.returnValue === "confirm");
+        });
+        function showNotice(message, kind = "warning", showPhone = false) {
+          document.getElementById("contact-dialog-title").textContent = {
+            success: "전송 완료", error: "전송 실패", warning: "확인해 주세요", confirm: "문의 메일 전송",
+          }[kind];
+          document.getElementById("contact-dialog-message").textContent = message;
+          document.getElementById("contact-dialog-icon").textContent = kind === "success" ? "✓" : "!";
+          document.getElementById("contact-dialog-phone").hidden = !showPhone;
+          dialog.dataset.kind = kind;
+          dialog.returnValue = "";
+          dialogCancel.hidden = kind !== "confirm";
+          dialogOk.textContent = kind === "confirm" ? "전송하기" : "확인";
+          // Retain a visible error even in browsers without dialog support.
+          if (typeof dialog.showModal !== "function") {
+            alert(message);
+            return;
+          }
+          if (!dialog.open) dialog.showModal();
+          dialogOk.focus();
+        }
+        function confirmSend() {
+          const message = "문의 메일을 전송하시겠습니까?";
+          if (typeof dialog.showModal !== "function") return Promise.resolve(confirm(message));
+          return new Promise((resolve) => {
+            resolveConfirmation = resolve;
+            showNotice(message, "confirm");
+          });
+        }
+        let sending = false;
+        let confirming = false;
+        $sendBtn.off().on("click", async function () {
+          if (sending || confirming) return;
           if ($("#company").val() == "") {
-            alert("기업/기관명을 입력해주세요.");
+            showNotice("기업/기관명을 입력해주세요.");
             return false;
           }
           if ($("#name").val() == "") {
-            alert("성명을 입력해주세요.");
+            showNotice("성명을 입력해주세요.");
             return false;
           }
           if ($("#contact").val() == "") {
-            alert("연락처를 입력해주세요.");
+            showNotice("연락처를 입력해주세요.");
             return false;
           }
           if (!$("#solution").val()) {
-            alert("솔루션을 선택해주세요.");
+            showNotice("솔루션을 선택해주세요.");
             return false;
           }
           if ($("#email").val() == "") {
-            alert("이메일을 입력해주세요.");
+            showNotice("이메일을 입력해주세요.");
             return false;
           }
           if ($("#contents").val() == "") {
-            alert("문의내용을 입력해주세요.");
+            showNotice("문의내용을 입력해주세요.");
             return false;
           }
           if (!$("#check").is(":checked")) {
-            alert("개인정보 수집 및 이용에 동의가 필요합니다.");
+            showNotice("개인정보 수집 및 이용에 동의가 필요합니다.");
             return false;
           }
 
-          if (confirm("문의 메일을 전송하시겠습니까?")) {
+          confirming = true;
+          let confirmed;
+          try {
+            confirmed = await confirmSend();
+          } finally {
+            confirming = false;
+          }
+          if (confirmed) {
             let templateParams = {
               company: $("#company").val(),
               name: $("#name").val(),
@@ -175,14 +230,32 @@
               contents: $("#contents").val(),
             };
 
-            emailjs.send("nextory", "nextory_template", templateParams).then(
-              function (response) {
-                console.log("SUCCESS!", response.status, response.text);
-              },
-              function (err) {
-                console.log("FAILED...", err);
-              }
-            );
+            sending = true;
+            $sendBtn.prop("disabled", true).text("전송 중...");
+            let timer;
+            const timeoutError = new Error("Contact request timed out");
+            try {
+              // Initialize here so a missing SDK or initialization error is also reported.
+              emailjs.init({ publicKey: "1wcs0MqB2sGqdl4jy" });
+              const response = await Promise.race([
+                emailjs.send("nextory", "nextory_template", templateParams),
+                new Promise((_, reject) => {
+                  timer = setTimeout(() => reject(timeoutError), 30000);
+                }),
+              ]);
+              if (response.status !== 200) throw new Error("Unexpected email response");
+              const message = "문의 메일이 전송되었습니다. 담당자가 확인 후 연락드리겠습니다.";
+              showNotice(message, "success");
+            } catch (error) {
+              const message = error === timeoutError
+                ? "응답이 지연되어 문의 메일의 전송 결과를 확인하지 못했습니다. 02-6953-4490으로 유선 문의해 주세요. 중복 접수를 피하려면 재전송 전에 접수 여부를 확인해 주세요. 입력 내용은 현재 화면에 유지됩니다."
+                : "메일 전송에 실패했습니다. 02-6953-4490으로 유선 문의해 주세요. 문의가 정상 접수되지 않았으며, 입력 내용은 현재 화면에 유지됩니다.";
+              showNotice(message, error === timeoutError ? "warning" : "error", true);
+            } finally {
+              clearTimeout(timer);
+              sending = false;
+              $sendBtn.prop("disabled", false).text("문의하기");
+            }
           }
         });
       })();
